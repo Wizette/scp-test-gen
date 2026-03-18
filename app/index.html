@@ -67,6 +67,21 @@ a:hover { text-decoration: underline; }
   color: rgb(140, 140, 140);
   font-variant-numeric: tabular-nums;
 }
+.logout-link {
+  font-size: 12px;
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.logout-link:hover { color: #ef4444; text-decoration: underline; }
+.user-bar {
+  text-align: right;
+  font-size: 12px;
+  color: rgb(160, 160, 160);
+  margin-bottom: 10px;
+}
+.user-bar strong { color: rgb(100, 100, 100); }
 
 /* ── Start Screen ────────────────────────────────── */
 #start-screen .test-info { text-align: center; }
@@ -468,13 +483,17 @@ a:hover { text-decoration: underline; }
 <div id="header-bar">
   <div class="container">
     <span class="test-title" id="hdr-title"></span>
-    <span class="timer" id="hdr-timer">00:00:00</span>
+    <span>
+      <span class="timer" id="hdr-timer">00:00:00</span>
+      <a class="logout-link" onclick="doLogout()" title="Sign out">logout</a>
+    </span>
   </div>
 </div>
 
 <!-- ════ START SCREEN ════ -->
 <div id="start-screen">
   <div class="container">
+    <div class="user-bar" id="user-bar"></div>
     <div class="card test-info">
       <h1 id="start-title">Loading…</h1>
       <p class="instructor" id="start-instructor"></p>
@@ -974,8 +993,35 @@ function retakeTest() {
   document.getElementById('start-screen').style.display = 'block';
 }
 
+/* ── Auth ────────────────────────────────────────── */
+async function checkAuth() {
+  try {
+    const resp = await fetch('/api/verify');
+    if (resp.ok) {
+      const user = await resp.json();
+      document.getElementById('user-bar').innerHTML =
+        'Signed in as <strong>' + escHtml(user.displayName) + '</strong>'
+        + ' &middot; <a class="logout-link" onclick="doLogout()">Sign out</a>';
+      return true;
+    }
+  } catch {}
+  return false;
+}
+
+async function doLogout() {
+  try { await fetch('/api/logout', { method: 'POST' }); } catch {}
+  location.href = 'login.html';
+}
+
 /* ── Init ────────────────────────────────────────── */
-loadTest();
+(async function init() {
+  const authed = await checkAuth();
+  if (!authed && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+    location.href = 'login.html' + location.search;
+    return;
+  }
+  loadTest();
+})();
 </script>
 </body>
 </html>

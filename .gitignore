@@ -6,6 +6,12 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Node
+node_modules/
+
+# Azure Functions
+api/local.settings.json
+
 # OS
 Thumbs.db
 Desktop.ini

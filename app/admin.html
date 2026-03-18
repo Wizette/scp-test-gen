@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCP Test – Admin</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(69, 79, 89);
+  background: rgb(245, 245, 245);
+  line-height: 1.5;
+}
+.container { max-width: 700px; margin: 0 auto; padding: 30px 16px; }
+.card {
+  background: #fff;
+  border: 1px solid rgb(217, 218, 218);
+  border-radius: 4px;
+  padding: 24px 20px;
+  margin-bottom: 16px;
+}
+h1 { font-size: 20px; margin-bottom: 4px; }
+.subtitle { color: rgb(140, 140, 140); font-size: 13px; margin-bottom: 20px; }
+.key-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.key-row input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid rgb(217, 218, 218);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+.key-row input:focus { outline: none; border-color: #3b82f6; }
+.btn {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary { background: #3b82f6; color: #fff; }
+.btn-primary:hover { background: #2563eb; }
+.btn-success { background: #16a34a; color: #fff; }
+.btn-success:hover { background: #15803d; }
+.btn-danger { background: #ef4444; color: #fff; }
+.btn-danger:hover { background: #dc2626; }
+.btn-outline {
+  background: transparent;
+  color: rgb(69, 79, 89);
+  border: 1px solid rgb(217, 218, 218);
+}
+.btn-outline:hover { background: rgb(245, 245, 245); }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+.msg {
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  display: none;
+}
+.msg.error { display: block; background: #fee2e2; color: #dc2626; }
+.msg.success { display: block; background: #dcfce7; color: #16a34a; }
+.msg.info { display: block; background: #dbeafe; color: #1e40af; }
+
+/* User table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 2px solid rgb(230, 230, 230);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgb(140, 140, 140);
+}
+td {
+  padding: 10px 6px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  vertical-align: middle;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.badge-pending { background: #fef3c7; color: #92400e; }
+.badge-approved { background: #dcfce7; color: #166534; }
+.badge-rejected { background: #fee2e2; color: #991b1b; }
+.actions { display: flex; gap: 4px; flex-wrap: wrap; }
+.empty { text-align: center; color: rgb(180, 180, 180); padding: 30px; }
+.back-link { text-align: center; margin-top: 12px; }
+.back-link a { color: rgb(140, 140, 140); font-size: 13px; text-decoration: none; }
+.back-link a:hover { text-decoration: underline; }
+.header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Admin Panel</h1>
+    <p class="subtitle">Manage user access requests</p>
+
+    <div class="key-row">
+      <input type="password" id="admin-key" placeholder="Enter admin key" autocomplete="off">
+      <button class="btn btn-primary" onclick="loadUsers()">Load Users</button>
+    </div>
+    <div class="msg" id="admin-msg"></div>
+  </div>
+
+  <div class="card" id="users-card" style="display:none;">
+    <div class="header-row">
+      <h3>Users</h3>
+      <button class="btn btn-outline btn-sm" onclick="loadUsers()">Refresh</button>
+    </div>
+    <div id="users-body"></div>
+  </div>
+
+  <div class="back-link"><a href="login.html">← Back to login</a></div>
+</div>
+
+<script>
+let adminKey = '';
+
+function showMsg(text, type) {
+  const el = document.getElementById('admin-msg');
+  el.textContent = text;
+  el.className = 'msg ' + type;
+}
+
+async function loadUsers() {
+  adminKey = document.getElementById('admin-key').value.trim();
+  if (!adminKey) { showMsg('Enter admin key.', 'error'); return; }
+
+  try {
+    const resp = await fetch('/api/admin/list', {
+      headers: { 'x-admin-key': adminKey }
+    });
+
+    if (!resp.ok) {
+      const data = await resp.json();
+      showMsg(data.error || 'Access denied.', 'error');
+      document.getElementById('users-card').style.display = 'none';
+      return;
+    }
+
+    const users = await resp.json();
+    document.getElementById('admin-msg').className = 'msg';
+    document.getElementById('users-card').style.display = 'block';
+    renderUsers(users);
+  } catch (err) {
+    showMsg('Network error.', 'error');
+  }
+}
+
+function renderUsers(users) {
+  const body = document.getElementById('users-body');
+
+  if (users.length === 0) {
+    body.innerHTML = '<div class="empty">No users yet.</div>';
+    return;
+  }
+
+  // Sort: pending first, then by date
+  users.sort((a, b) => {
+    if (a.status === 'pending' && b.status !== 'pending') return -1;
+    if (b.status === 'pending' && a.status !== 'pending') return 1;
+    return new Date(b.createdAt) - new Date(a.createdAt);
+  });
+
+  let html = '<table><thead><tr><th>User</th><th>Name</th><th>Status</th><th>Actions</th></tr></thead><tbody>';
+
+  users.forEach(u => {
+    const badge = `<span class="badge badge-${u.status}">${u.status}</span>`;
+    let actions = '';
+    if (u.status === 'pending') {
+      actions = `<button class="btn btn-success btn-sm" onclick="doAction('${u.username}','approve')">Approve</button>`
+              + `<button class="btn btn-danger btn-sm" onclick="doAction('${u.username}','reject')">Reject</button>`;
+    } else if (u.status === 'approved') {
+      actions = `<button class="btn btn-danger btn-sm" onclick="doAction('${u.username}','reject')">Revoke</button>`;
+    } else {
+      actions = `<button class="btn btn-success btn-sm" onclick="doAction('${u.username}','approve')">Approve</button>`;
+    }
+    actions += `<button class="btn btn-outline btn-sm" onclick="doAction('${u.username}','delete')" title="Delete user">✕</button>`;
+
+    const date = u.createdAt ? new Date(u.createdAt).toLocaleDateString() : '—';
+    html += `<tr><td><strong>${esc(u.username)}</strong><br><span style="font-size:11px;color:rgb(160,160,160)">${date}</span></td>`
+         + `<td>${esc(u.displayName)}</td><td>${badge}</td><td class="actions">${actions}</td></tr>`;
+  });
+
+  html += '</tbody></table>';
+  body.innerHTML = html;
+}
+
+async function doAction(username, action) {
+  const verb = action === 'delete' ? 'delete' : action === 'approve' ? 'approve' : 'reject';
+  if (action === 'delete' && !confirm(`Delete user "${username}" permanently?`)) return;
+
+  try {
+    const resp = await fetch('/api/admin/approve', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-key': adminKey },
+      body: JSON.stringify({ username, action })
+    });
+    const data = await resp.json();
+
+    if (resp.ok) {
+      showMsg(data.message, 'success');
+      loadUsers();
+    } else {
+      showMsg(data.error || 'Action failed.', 'error');
+    }
+  } catch (err) {
+    showMsg('Network error.', 'error');
+  }
+}
+
+function esc(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+</script>
+</body>
+</html>
