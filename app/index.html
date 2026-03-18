@@ -70,8 +70,9 @@ a:hover { text-decoration: underline; }
 
 /* ── Start Screen ────────────────────────────────── */
 #start-screen .test-info { text-align: center; }
-#start-screen h1 { font-size: 22px; margin-bottom: 6px; }
-#start-screen .instructor { color: rgb(140, 140, 140); margin-bottom: 20px; }
+#start-screen h1 { font-size: 24px; margin-bottom: 4px; }
+#start-screen .start-subtitle { font-size: 15px; color: rgb(100, 100, 100); margin: 2px 0 0; }
+#start-screen .start-session { font-size: 13px; color: rgb(160, 160, 160); margin: 2px 0 18px; }
 #start-screen .meta-row {
   display: flex;
   justify-content: space-around;
@@ -601,7 +602,8 @@ a:hover { text-decoration: underline; }
   <div class="container">
     <div class="card test-info">
       <h1 id="start-title">Loading…</h1>
-      <p class="instructor" id="start-instructor"></p>
+      <p class="start-subtitle" id="start-subtitle"></p>
+      <p class="start-session" id="start-session"></p>
       <div class="meta-row">
         <div class="meta-item">
           <div class="value" id="start-qcount">—</div>
@@ -755,7 +757,8 @@ function selectMode(mode) {
 
 function populateStartScreen() {
   document.getElementById('start-title').textContent = testData.title;
-  document.getElementById('start-instructor').textContent = testData.instructor || '';
+  document.getElementById('start-subtitle').textContent = testData.subtitle || testData.instructor || '';
+  document.getElementById('start-session').textContent = testData.session || '';
   document.getElementById('start-qcount').textContent = testData.questions.length;
   const totalPts = testData.questions.reduce((s, q) => s + q.points, 0);
   document.getElementById('start-points').textContent = totalPts.toFixed(1);
