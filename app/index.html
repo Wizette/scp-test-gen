@@ -67,21 +67,6 @@ a:hover { text-decoration: underline; }
   color: rgb(140, 140, 140);
   font-variant-numeric: tabular-nums;
 }
-.logout-link {
-  font-size: 12px;
-  color: rgb(180, 180, 180);
-  text-decoration: none;
-  cursor: pointer;
-  margin-left: 12px;
-}
-.logout-link:hover { color: #ef4444; text-decoration: underline; }
-.user-bar {
-  text-align: right;
-  font-size: 12px;
-  color: rgb(160, 160, 160);
-  margin-bottom: 10px;
-}
-.user-bar strong { color: rgb(100, 100, 100); }
 
 /* ── Start Screen ────────────────────────────────── */
 #start-screen .test-info { text-align: center; }
@@ -483,17 +468,29 @@ a:hover { text-decoration: underline; }
 <div id="header-bar">
   <div class="container">
     <span class="test-title" id="hdr-title"></span>
-    <span>
-      <span class="timer" id="hdr-timer">00:00:00</span>
-      <a class="logout-link" onclick="doLogout()" title="Sign out">logout</a>
-    </span>
+    <span class="timer" id="hdr-timer">00:00:00</span>
+  </div>
+</div>
+
+<!-- ════ PASSWORD SCREEN ════ -->
+<div id="password-screen">
+  <div class="container" style="display:flex;align-items:center;justify-content:center;min-height:80vh;">
+    <div class="card" style="max-width:380px;width:100%;text-align:center;">
+      <h1 style="font-size:20px;margin-bottom:4px;">SCP Test</h1>
+      <p style="color:rgb(140,140,140);font-size:13px;margin-bottom:20px;">Enter password to begin</p>
+      <form onsubmit="return checkPassword(event)">
+        <input type="password" id="pw-input" placeholder="Password" autocomplete="off"
+          style="width:100%;padding:10px 12px;border:1px solid rgb(217,218,218);border-radius:4px;font-family:inherit;font-size:14px;margin-bottom:10px;text-align:center;">
+        <button class="btn btn-primary" type="submit" style="width:100%;">Enter</button>
+      </form>
+      <p id="pw-error" style="color:#dc2626;font-size:13px;margin-top:10px;display:none;">Incorrect password.</p>
+    </div>
   </div>
 </div>
 
 <!-- ════ START SCREEN ════ -->
-<div id="start-screen">
+<div id="start-screen" style="display:none;">
   <div class="container">
-    <div class="user-bar" id="user-bar"></div>
     <div class="card test-info">
       <h1 id="start-title">Loading…</h1>
       <p class="instructor" id="start-instructor"></p>
@@ -982,6 +979,7 @@ function retakeTest() {
   finished = false;
   gridVisible = false;
   clearInterval(timerInterval);
+  sessionStorage.removeItem('scp_auth');
   document.getElementById('results-screen').style.display = 'none';
   document.getElementById('question-screen').style.display = 'none';
   document.getElementById('header-bar').style.display = 'none';
@@ -990,37 +988,44 @@ function retakeTest() {
   document.getElementById('grid-filter').classList.add('hidden');
   document.getElementById('chk-filter-bm').checked = false;
   document.getElementById('btn-toggle-grid').textContent = 'Show Question Grid';
-  document.getElementById('start-screen').style.display = 'block';
+  document.getElementById('pw-input').value = '';
+  document.getElementById('pw-error').style.display = 'none';
+  document.getElementById('start-screen').style.display = 'none';
+  document.getElementById('password-screen').style.display = 'block';
+  document.getElementById('pw-input').focus();
 }
 
-/* ── Auth ────────────────────────────────────────── */
-async function checkAuth() {
-  try {
-    const resp = await fetch('/api/verify');
-    if (resp.ok) {
-      const user = await resp.json();
-      document.getElementById('user-bar').innerHTML =
-        'Signed in as <strong>' + escHtml(user.displayName) + '</strong>'
-        + ' &middot; <a class="logout-link" onclick="doLogout()">Sign out</a>';
-      return true;
-    }
-  } catch {}
+/* ── Password Gate ───────────────────────────────── */
+const PASS_HASH = '715eb239c5eeefc9b250f18660f63776023e2f0de5d38d8fc261452063b7bc2e';
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function checkPassword(e) {
+  e.preventDefault();
+  const pw = document.getElementById('pw-input').value;
+  const hash = await sha256(pw);
+  if (hash === PASS_HASH) {
+    sessionStorage.setItem('scp_auth', '1');
+    document.getElementById('password-screen').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
+  } else {
+    document.getElementById('pw-error').style.display = 'block';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
   return false;
 }
 
-async function doLogout() {
-  try { await fetch('/api/logout', { method: 'POST' }); } catch {}
-  location.href = 'login.html';
-}
-
 /* ── Init ────────────────────────────────────────── */
-(async function init() {
-  const authed = await checkAuth();
-  if (!authed && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-    location.href = 'login.html' + location.search;
-    return;
-  }
+(function init() {
   loadTest();
+  if (sessionStorage.getItem('scp_auth') === '1') {
+    document.getElementById('password-screen').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
+  }
 })();
 </script>
 </body>
