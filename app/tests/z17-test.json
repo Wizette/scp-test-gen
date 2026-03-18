@@ -1,0 +1,780 @@
+{
+  "title": "Hilchos Hafrashas Challah – Rav Elyada Goldwicht – Summer 25",
+  "instructor": "Rav Elyada Goldwicht",
+  "totalQuestions": 63,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "text": "What is the biblical source for the mitzvah of hafrashas challah?",
+      "options": [
+        { "label": "A", "text": "Devarim 18 – the portion of the Kohen." },
+        { "label": "B", "text": "Bamidbar 15:17-21 – when the Jewish people enter the land, a portion of dough must be given to the Kohen." },
+        { "label": "C", "text": "Vayikra 23 – the mitzvos of the Moadim." },
+        { "label": "D", "text": "Shemos 25 – the terumah for the Mishkan." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 2,
+      "type": "tf",
+      "text": "True (A) or False (B): The Torah refers to hafrashas challah as \"terumah.\"",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "text": "According to Rashi and the Sifri, when did the mitzvah of hafrashas challah go into effect?",
+      "options": [
+        { "label": "A", "text": "Only after the land of Israel was fully conquered and settled (14 years after crossing the Jordan)." },
+        { "label": "B", "text": "Only after the Beis HaMikdash was built." },
+        { "label": "C", "text": "As soon as the Jewish people entered the land, even before it was conquered and settled." },
+        { "label": "D", "text": "Only after the majority of Jews lived in Eretz Yisrael." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "text": "According to the Rambam, what is the status of the mitzvah of hafrashas challah today?",
+      "options": [
+        { "label": "A", "text": "Biblical in Eretz Yisrael, does not apply in chutz la'aretz." },
+        { "label": "B", "text": "It is only a minhag, not an obligation." },
+        { "label": "C", "text": "Biblical everywhere." },
+        { "label": "D", "text": "Rabbinic – both in Eretz Yisrael and in chutz la'aretz." }
+      ],
+      "correct": ["D"],
+      "points": 1.3
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "text": "Why is hafrashas challah observed in chutz la'aretz?",
+      "options": [
+        { "label": "A", "text": "Because it is a biblical commandment that applies everywhere." },
+        { "label": "B", "text": "So that the mitzvah will not be forgotten." },
+        { "label": "C", "text": "Because the kedusha of Eretz Yisrael extends to the entire world." },
+        { "label": "D", "text": "It is only observed as a stringency, not an obligation." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "text": "According to the Chazon Ish, what is needed for the mitzvah of challah to become biblical again?",
+      "options": [
+        { "label": "A", "text": "The majority of Jews must live in Eretz Yisrael." },
+        { "label": "B", "text": "The Beis HaMikdash must be rebuilt." },
+        { "label": "C", "text": "The Jewish people may need to enter the land under the direction of a king or navi." },
+        { "label": "D", "text": "All 12 tribes must be identified and settled on their ancestral land." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 7,
+      "type": "tf",
+      "text": "True (A) or False (B): According to the Chazon Ish, regarding terumah, if the majority of Jews return to Eretz Yisrael, the mitzvah of terumah will become biblical – even without a king or navi.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "text": "Rav Chaim Kanievsky suggests that the mitzvah of terumah may remain rabbinic today because:",
+      "options": [
+        { "label": "A", "text": "The Beis HaMikdash has not been rebuilt." },
+        { "label": "B", "text": "The ten lost tribes are still unaccounted for, so the majority of Jews may not actually be in Israel." },
+        { "label": "C", "text": "Ezra did not sanctify the land a second time." },
+        { "label": "D", "text": "The mitzvah only applies with a Sanhedrin." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 9,
+      "type": "ms",
+      "text": "What are the three differences between challah of Eretz Yisrael and challah of chutz la'aretz discussed in the source? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "The bitul (nullification) ratios when challah mixes with permitted bread." },
+        { "label": "B", "text": "Whether you may eat the bread before being mafrish challah." },
+        { "label": "C", "text": "Whether you may be mafrish from bread not physically present before you (shelo min hamukaf)." },
+        { "label": "D", "text": "Whether the challah needs to be burned or may be eaten." }
+      ],
+      "correct": ["A", "B", "C"],
+      "points": 1.3
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "text": "According to the S\"A, when challah of chutz la'aretz accidentally mixes with permitted bread, what ratio is needed to permit it?",
+      "options": [
+        { "label": "A", "text": "100:1." },
+        { "label": "B", "text": "60:1 (shishim)." },
+        { "label": "C", "text": "Even at a 50-50 ratio, the bread is permitted." },
+        { "label": "D", "text": "It can never be permitted." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "text": "According to the Rama, what ratio is needed when challah of chutz la'aretz mixes with the same type of bread (min b'mino)?",
+      "options": [
+        { "label": "A", "text": "50-50." },
+        { "label": "B", "text": "60:1 (shishim)." },
+        { "label": "C", "text": "100:1." },
+        { "label": "D", "text": "It is always forbidden." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "text": "Scenario: You live in chutz la'aretz. On Shabbos night, your wife tells you she forgot to be mafrish challah from the challah she baked. What should you do?",
+      "options": [
+        { "label": "A", "text": "Be mafrish challah immediately – it is permitted on Shabbos in chutz la'aretz." },
+        { "label": "B", "text": "You may eat the challah on Shabbos and leave over a small amount to be mafrish from after Shabbos." },
+        { "label": "C", "text": "You may not eat the challah at all and must borrow from a neighbor." },
+        { "label": "D", "text": "You should be mafrish during bein hashmashos of motzaei Shabbos." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "text": "Same scenario – but now you live in Eretz Yisrael. You forgot to be mafrish challah and it is now Shabbos. What should you do?",
+      "options": [
+        { "label": "A", "text": "You may eat the challah and leave over a piece." },
+        { "label": "B", "text": "You may be mafrish on Shabbos in Eretz Yisrael since it is a biblical mitzvah." },
+        { "label": "C", "text": "You may not eat from the challah and should borrow from a neighbor." },
+        { "label": "D", "text": "You should eat the challah and do teshuvah after Shabbos." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "text": "If you remember during bein hashmashos on erev Shabbos that you forgot to be mafrish: In chutz la'aretz you may NOT be mafrish, but in Eretz Yisrael you MAY. Why the difference?",
+      "options": [
+        { "label": "A", "text": "In chutz la'aretz the mitzvah is only rabbinic so there is no urgency." },
+        { "label": "B", "text": "In chutz la'aretz there is a remedy on Shabbos itself (eating and leaving over), so being mafrish during bein hashmashos is unnecessary. In Eretz Yisrael, there is no remedy on Shabbos, so Chazal permitted it during bein hashmashos." },
+        { "label": "C", "text": "Bein hashmashos in Eretz Yisrael is always considered a weekday." },
+        { "label": "D", "text": "The Rama permits being mafrish during bein hashmashos everywhere, but the S\"A only permits it in Eretz Yisrael." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "text": "A mother in Eretz Yisrael baked challah and sent some to her married children, then remembered on Shabbos that she forgot to be mafrish. According to the Baruch Omer, what should she do?",
+      "options": [
+        { "label": "A", "text": "She may not do anything until after Shabbos." },
+        { "label": "B", "text": "She should be mafrish from the challah she has at home and have it cover what was sent – since it is her fault that her children would eat tevel." },
+        { "label": "C", "text": "She should call her children and tell them not to eat the challah." },
+        { "label": "D", "text": "She should rely on the fact that her children are transgressing accidentally, so no action is needed." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "text": "The Nesivos HaMishpat seems to disagree with the previous approach. What is his reasoning?",
+      "options": [
+        { "label": "A", "text": "Being mafrish on Shabbos is always a biblical violation and can never be permitted." },
+        { "label": "B", "text": "One who accidentally transgresses a rabbinic prohibition does not even need to do teshuvah, so the children are not truly sinning, and therefore the mother cannot violate two prohibitions to save them." },
+        { "label": "C", "text": "Only a Beis Din may be mafrish from one location to another." },
+        { "label": "D", "text": "The mother is not considered a Chaver and therefore may not be mafrish for others." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 17,
+      "type": "tf",
+      "text": "True (A) or False (B): In chutz la'aretz, if the dough was divided into multiple pieces, you may be mafrish challah from the loaves in front of you to cover loaves not physically present, as long as they are from the same batch of dough.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "text": "What should you do if you forgot to be mafrish challah from your matzah and it is now Pesach night in chutz la'aretz?",
+      "options": [
+        { "label": "A", "text": "You should be mafrish immediately on Yom Tov since it is a mitzvah." },
+        { "label": "B", "text": "You may not eat any matzah the entire Pesach." },
+        { "label": "C", "text": "You should leave over a piece from each matzah batch and be mafrish after Yom Tov." },
+        { "label": "D", "text": "You may eat freely since matzah is exempt from challah." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 19,
+      "type": "ms",
+      "text": "What are the three solutions suggested for someone in Eretz Yisrael who forgot to be mafrish before Pesach? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "RSZA: If there is no other way to get kosher matzah, one may be mafrish on Pesach to fulfill the biblical mitzvah of eating matzah." },
+        { "label": "B", "text": "Chalas Lechem: Give the matzah as a gift to a child (12-year-old boy or 11-year-old girl) and have the child be mafrish." },
+        { "label": "C", "text": "RSZA: The Rav of the community should be mafrish before Pesach with intention to cover anyone who forgot." },
+        { "label": "D", "text": "One should simply eat the matzah without hafrashas challah since in sha'as hadchak it is permitted." }
+      ],
+      "correct": ["A", "B", "C"],
+      "points": 1.3
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "text": "RSZA used to be mafrish before Pesach for his entire community in Shaarei Chessed. A glaring question on this practice is:",
+      "options": [
+        { "label": "A", "text": "A Rav cannot make a bracha on behalf of others." },
+        { "label": "B", "text": "How can he be mafrish from one location to another in Eretz Yisrael, and even in chutz la'aretz it doesn't work from one batch to another?" },
+        { "label": "C", "text": "The matzah may have already been eaten before his hafrasha." },
+        { "label": "D", "text": "He was only allowed to do this because he was the Rav." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 21,
+      "type": "mc",
+      "text": "If matzah was made in Eretz Yisrael and sent to chutz la'aretz, and they forgot to be mafrish, the Chashev Ha'Efod quotes the Bach who passkens that:",
+      "options": [
+        { "label": "A", "text": "The matzah may not be eaten and must be destroyed." },
+        { "label": "B", "text": "The matzah has only a rabbinic obligation of challah, so you may eat and leave over a piece to be mafrish from." },
+        { "label": "C", "text": "The matzah retains its Eretz Yisrael obligation and may not be eaten before being mafrish." },
+        { "label": "D", "text": "The matzah is exempt from challah once it leaves Eretz Yisrael." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 22,
+      "type": "tf",
+      "text": "True (A) or False (B): Being mafrish challah on Shabbos is prohibited because of \"metaken\" (fixing).",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 23,
+      "type": "mc",
+      "text": "According to the Mishnah, a person baking bread at home should separate what fraction of the dough for challah?",
+      "options": [
+        { "label": "A", "text": "1/10." },
+        { "label": "B", "text": "1/24." },
+        { "label": "C", "text": "1/48." },
+        { "label": "D", "text": "1/60." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 24,
+      "type": "mc",
+      "text": "A commercial baker only needs to separate 1/48 of the dough. Why is one baking at home required to give more (1/24)?",
+      "options": [
+        { "label": "A", "text": "Because a household needs to give a more respectable amount, but since a baker makes larger batches, 1/48 of his dough is already roughly the same size as 1/24 of a household batch." },
+        { "label": "B", "text": "Because a baker gives challah more frequently, so each time he gives less." },
+        { "label": "C", "text": "Because the Torah only requires 1/48 from a baker but mandates 1/24 from a household." },
+        { "label": "D", "text": "Because a baker's dough is usually tamei." }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 25,
+      "type": "mc",
+      "text": "The Rambam holds that separating and giving challah is one mitzvah, while the Ramban argues there are two mitzvos. What are the two mitzvos according to the Ramban?",
+      "options": [
+        { "label": "A", "text": "1) The mitzvah of baking bread. 2) The mitzvah of giving to the kohen." },
+        { "label": "B", "text": "1) The mitzvah of separating dough (making the rest permissible). 2) The mitzvah of giving dough to the kohen." },
+        { "label": "C", "text": "1) The mitzvah of kneading dough. 2) The mitzvah of burning the challah." },
+        { "label": "D", "text": "1) The mitzvah of separating 1/24. 2) The mitzvah of separating 1/48." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 26,
+      "type": "tf",
+      "text": "True (A) or False (B): According to the Rambam, biblically speaking, you may fulfill the mitzvah of hafrashas challah by separating even the smallest amount of dough.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 27,
+      "type": "mc",
+      "text": "How do we passkin lema'ase regarding how much challah to separate today?",
+      "options": [
+        { "label": "A", "text": "Both Ashkenazim and Sephardim: Separate any amount and burn it; the custom is to separate a kezayis." },
+        { "label": "B", "text": "Ashkenazim: 1/24. Sephardim: 1/48." },
+        { "label": "C", "text": "Everyone separates exactly 1/24 and gives it to a confirmed kohen." },
+        { "label": "D", "text": "The Rama requires 1/10 of the dough to be separated." }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 28,
+      "type": "mc",
+      "text": "Why is the challah burned today instead of being given to a kohen?",
+      "options": [
+        { "label": "A", "text": "Because there are no kohanim alive today." },
+        { "label": "B", "text": "Because we are all tamei and the challah is tamei, and we are not certain who is actually a kohen today." },
+        { "label": "C", "text": "Because the Torah requires challah to always be burned." },
+        { "label": "D", "text": "Because the Rambam prohibited giving challah to kohanim outside of Eretz Yisrael." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 29,
+      "type": "mc",
+      "text": "When burning challah in your home oven, why should the challah be double-wrapped in tinfoil?",
+      "options": [
+        { "label": "A", "text": "Because the bracha requires the challah to be wrapped." },
+        { "label": "B", "text": "To prevent issues of reicha (aroma) or zei'ah (steam) that may forbid other food in the oven." },
+        { "label": "C", "text": "Because a non-kohen may not see the challah being burned." },
+        { "label": "D", "text": "To ensure the challah is fully incinerated." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 30,
+      "type": "mc",
+      "text": "If the tinfoil around the challah ripped while baking in the oven with other food, what is the status of the other food?",
+      "options": [
+        { "label": "A", "text": "The other food is forbidden and must be discarded." },
+        { "label": "B", "text": "The other food is permitted because bedieved we do not take reicha into consideration, and dry challah does not emit steam." },
+        { "label": "C", "text": "Only the food directly touching the challah is forbidden." },
+        { "label": "D", "text": "The entire oven needs to be kashered." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 31,
+      "type": "mc",
+      "text": "Why should you not stick a fork into the challah to check if it is fully burnt?",
+      "options": [
+        { "label": "A", "text": "Because the challah might still have kedusha." },
+        { "label": "B", "text": "Because if the challah isn't burned through, the forbidden challah would render the fork non-kosher, requiring libun." },
+        { "label": "C", "text": "Because you may not touch challah with a metal utensil." },
+        { "label": "D", "text": "Because it is a disgrace to the mitzvah." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 32,
+      "type": "tf",
+      "text": "True (A) or False (B): If you have no way to burn the challah, Rav Ovadya passkens that you should separate less than a kezayis, wrap it in a bag, and dispose of it.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 33,
+      "type": "mc",
+      "text": "What does the Chalas Kehilchasa passkin about when you must burn the challah?",
+      "options": [
+        { "label": "A", "text": "You may hold on to it and burn it whenever convenient." },
+        { "label": "B", "text": "The challah should be burned right away to avoid accidentally benefiting from it." },
+        { "label": "C", "text": "It should be frozen until erev Pesach and burned with the chametz." },
+        { "label": "D", "text": "It only needs to be burned before the next Shabbos." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 34,
+      "type": "ms",
+      "text": "Which of the following are concerns when burning challah on the stovetop directly on the grates? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "The grates will get dirty." },
+        { "label": "B", "text": "The grates may become non-kosher since today's grates are elevated above the fire and the flames may not reach them fully." },
+        { "label": "C", "text": "Burning on the stovetop is rabbinically prohibited." },
+        { "label": "D", "text": "The fire will be extinguished." }
+      ],
+      "correct": ["A", "B"],
+      "points": 1.3
+    },
+    {
+      "id": 35,
+      "type": "ms",
+      "text": "Which of the following grains are obligated in hafrashas challah? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "Wheat, barley, spelt." },
+        { "label": "B", "text": "Oats and rye." },
+        { "label": "C", "text": "Rice and corn." },
+        { "label": "D", "text": "All of the above." }
+      ],
+      "correct": ["A", "B"],
+      "points": 1.3
+    },
+    {
+      "id": 36,
+      "type": "mc",
+      "text": "The Gemara teaches that one is only obligated to be mafrish challah from a batch of dough the size of the Manna in the midbar (an omer). How much is an omer?",
+      "options": [
+        { "label": "A", "text": "1/3 of an eifah." },
+        { "label": "B", "text": "1/10 of an eifah." },
+        { "label": "C", "text": "1/6 of an eifah." },
+        { "label": "D", "text": "1 eifah." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 37,
+      "type": "mc",
+      "text": "The acronym כאסקלב יגודו is used to calculate halachic measurements. What does it represent?",
+      "options": [
+        { "label": "A", "text": "The names of the Rishonim who discuss the measurements." },
+        { "label": "B", "text": "כאסקלב = the units (כור, איפה, סאה, קב, לוג, ביצה) and יגודו = the numerical ratios between them (10, 3, 6, 4, 6)." },
+        { "label": "C", "text": "The steps for performing hafrashas challah." },
+        { "label": "D", "text": "The names of the five grains." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 38,
+      "type": "mc",
+      "text": "Using the כאסקלב system, how many eggs are in 1/10 of an eifah?",
+      "options": [
+        { "label": "A", "text": "24 eggs." },
+        { "label": "B", "text": "36 eggs." },
+        { "label": "C", "text": "43.2 eggs (43 and 1/5)." },
+        { "label": "D", "text": "60 eggs." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 39,
+      "type": "mc",
+      "text": "The Tzlach (Rav Yechezkel Landau) discovered a major problem with the two Gemara-based calculations for the volume of challah (eggs vs. cubic thumb widths). What did he find?",
+      "options": [
+        { "label": "A", "text": "The egg calculation was exactly double the thumb calculation." },
+        { "label": "B", "text": "The thumb-width calculation came out to almost double the volume of the egg calculation." },
+        { "label": "C", "text": "The two calculations were identical." },
+        { "label": "D", "text": "The egg calculation depends on whether you use chicken or goose eggs." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 40,
+      "type": "mc",
+      "text": "How did the Tzlach resolve this discrepancy?",
+      "options": [
+        { "label": "A", "text": "People's thumbs have gotten smaller over time." },
+        { "label": "B", "text": "The eggs in Chazal's time were approximately half the size of today's eggs." },
+        { "label": "C", "text": "Today's eggs are approximately half the size of those in Chazal's time." },
+        { "label": "D", "text": "The Gemara's measurements were only approximate." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 41,
+      "type": "mc",
+      "text": "You have 1.2 kg of flour and are making challah. What should you do?",
+      "options": [
+        { "label": "A", "text": "Be mafrish challah with a bracha." },
+        { "label": "B", "text": "Be mafrish challah without a bracha." },
+        { "label": "C", "text": "No need to be mafrish at all." },
+        { "label": "D", "text": "Only be mafrish if you live in Eretz Yisrael." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 42,
+      "type": "mc",
+      "text": "You are using 1.56 kg of flour. According to Rav Ovadya Yosef, should you recite a bracha when being mafrish?",
+      "options": [
+        { "label": "A", "text": "No bracha – this is below the threshold." },
+        { "label": "B", "text": "Yes – Rav Ovadya passkens that 1.56 kg requires mafrish with a bracha." },
+        { "label": "C", "text": "Only with a bracha if in Eretz Yisrael." },
+        { "label": "D", "text": "Rav Ovadya does not discuss this amount." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 43,
+      "type": "mc",
+      "text": "According to Rav Chaim Naeh, at what weight of flour should you be mafrish with a bracha?",
+      "options": [
+        { "label": "A", "text": "1.2 kg." },
+        { "label": "B", "text": "1.56 kg." },
+        { "label": "C", "text": "1.66 kg." },
+        { "label": "D", "text": "2.25 kg." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 44,
+      "type": "mc",
+      "text": "According to the Chazon Ish, at what weight of flour do you recite a bracha when being mafrish?",
+      "options": [
+        { "label": "A", "text": "1.56 kg." },
+        { "label": "B", "text": "1.66 kg." },
+        { "label": "C", "text": "2.25 kg." },
+        { "label": "D", "text": "3.0 kg." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 45,
+      "type": "ms",
+      "text": "Match the correct weight to the correct authority. Which of the following pairings are correct? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "1.2 kg – all opinions agree to be mafrish without a bracha." },
+        { "label": "B", "text": "1.56 kg – Rav Ovadya: mafrish with a bracha." },
+        { "label": "C", "text": "1.66 kg – Chazon Ish: mafrish with a bracha." },
+        { "label": "D", "text": "2.25 kg – Chazon Ish: mafrish with a bracha." }
+      ],
+      "correct": ["A", "B", "D"],
+      "points": 1.3
+    },
+    {
+      "id": 46,
+      "type": "mc",
+      "text": "Rav Chaim Naeh reconciled the Tzlach's discrepancy differently. How?",
+      "options": [
+        { "label": "A", "text": "He proved that eggs have actually grown bigger since Chazal's time." },
+        { "label": "B", "text": "He argued that the thumb width should be measured from the narrow section, not the wide section, which brings the two calculations much closer together." },
+        { "label": "C", "text": "He rejected the thumb-width calculation entirely." },
+        { "label": "D", "text": "He showed that the Gemara in Pesachim was referring to a different type of measurement." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 47,
+      "type": "mc",
+      "text": "How does the Biur Halacha passkin regarding the Tzlach / Rav Chaim Naeh dispute?",
+      "options": [
+        { "label": "A", "text": "Always follow the Tzlach's larger measurement." },
+        { "label": "B", "text": "Always follow Rav Chaim Naeh's smaller measurement." },
+        { "label": "C", "text": "For biblical mitzvos use the larger Tzlach measurement; for rabbinic mitzvos use the smaller Rav Chaim Naeh measurement." },
+        { "label": "D", "text": "Follow whichever measurement your community traditionally uses." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 48,
+      "type": "tf",
+      "text": "True (A) or False (B): The weight required for hafrashas challah (e.g., 1.66 kg) refers to the flour only, and does not include the added water, sugar, and eggs.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 49,
+      "type": "mc",
+      "text": "When using whole wheat flour where the bran was removed during milling and added back later, what adjustment to the weight is needed?",
+      "options": [
+        { "label": "A", "text": "No adjustment is needed – whole wheat flour is measured the same as white flour." },
+        { "label": "B", "text": "You need to add at least 15% more flour, since the bran that was added back may not be included in the measurement." },
+        { "label": "C", "text": "You should subtract 15% since bran takes up more volume." },
+        { "label": "D", "text": "You should use volume measurement instead of weight for whole wheat." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 50,
+      "type": "tf",
+      "text": "True (A) or False (B): If the bran was NOT removed during milling (as in smaller organic mills), the required weight is actually LESS than 1.66 kg because bran takes up more volume but weighs less.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 51,
+      "type": "mc",
+      "text": "When using frozen flour, the Levush Mordechai writes that you should:",
+      "options": [
+        { "label": "A", "text": "Add a bit more flour to the required weight, because frozen flour weighs more due to frozen condensation." },
+        { "label": "B", "text": "Use less flour, since freezing makes the flour more dense." },
+        { "label": "C", "text": "Thaw the flour for exactly 24 hours before measuring." },
+        { "label": "D", "text": "Never use frozen flour for challah." }
+      ],
+      "correct": ["A"],
+      "points": 1.3
+    },
+    {
+      "id": 52,
+      "type": "mc",
+      "text": "You made a batch of dough with 1.3 kg of flour and were mafrish without a bracha. You then added more flour bringing the total to 1.8 kg. What is the problem?",
+      "options": [
+        { "label": "A", "text": "There is no problem – the original hafrasha covers the entire batch." },
+        { "label": "B", "text": "You are stuck: if 1.2 kg is the real threshold, the hafrasha already worked and you don't need to be mafrish again; but if 1.66 kg is the real threshold, you now need to be mafrish with a bracha for the first time." },
+        { "label": "C", "text": "You must throw out the entire batch and start over." },
+        { "label": "D", "text": "You should be mafrish again with a bracha on the additional flour only." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 53,
+      "type": "mc",
+      "text": "According to the Chalas Kehilchasa, if you started with 1.3 kg (mafrish without a bracha) and then added another 1.3 kg (total 2.6 kg), what should you do?",
+      "options": [
+        { "label": "A", "text": "No need to do anything – the original hafrasha covers everything." },
+        { "label": "B", "text": "Be mafrish again without a bracha." },
+        { "label": "C", "text": "Be mafrish again with a bracha – because regardless of whether the threshold is 1.2 or 1.66, both opinions would now require a bracha." },
+        { "label": "D", "text": "Wait 24 hours and then be mafrish with a bracha." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 54,
+      "type": "mc",
+      "text": "Is there an obligation to be mafrish challah on gluten-free wheat flour (wheat starch)?",
+      "options": [
+        { "label": "A", "text": "No – since it cannot rise and become chametz, it is completely exempt." },
+        { "label": "B", "text": "Yes with a bracha – according to Rav Rubin it is considered flour from the 5 grains and is obligated." },
+        { "label": "C", "text": "Most poskim say to be mafrish without a bracha due to safek; Rav Rubin passkens mafrish with a bracha if it was made by a Jew." },
+        { "label": "D", "text": "Only the Chazon Ish requires hafrasha; everyone else exempts it." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 55,
+      "type": "mc",
+      "text": "When different types of flour are mixed together BEFORE water is added, which grains can combine to reach the shiur for hafrashas challah?",
+      "options": [
+        { "label": "A", "text": "Only wheat and spelt can combine." },
+        { "label": "B", "text": "Only grains that are not kilayim with each other." },
+        { "label": "C", "text": "All five grains can combine with each other." },
+        { "label": "D", "text": "No grains can combine – each must reach the shiur independently." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 56,
+      "type": "mc",
+      "text": "When two separate batches of dough (each below the shiur) are touching, which grain can combine with ALL other grains?",
+      "options": [
+        { "label": "A", "text": "Wheat." },
+        { "label": "B", "text": "Barley." },
+        { "label": "C", "text": "Spelt." },
+        { "label": "D", "text": "Oats." }
+      ],
+      "correct": ["C"],
+      "points": 1.3
+    },
+    {
+      "id": 57,
+      "type": "ms",
+      "text": "When two separate batches of dough are touching (each below the shiur), wheat can combine with which grain(s)? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "Wheat." },
+        { "label": "B", "text": "Spelt." },
+        { "label": "C", "text": "Barley." },
+        { "label": "D", "text": "Oats." }
+      ],
+      "correct": ["A", "B"],
+      "points": 1.3
+    },
+    {
+      "id": 58,
+      "type": "mc",
+      "text": "When two separate batches each have a shiur of challah independently, you may be mafrish from one to the other only if:",
+      "options": [
+        { "label": "A", "text": "They are from any of the 5 grains – all combine." },
+        { "label": "B", "text": "They are from the same grain, OR from spelt to rye (and vice versa) and from barley to oats (and vice versa)." },
+        { "label": "C", "text": "They are from the same grain only." },
+        { "label": "D", "text": "They are placed in the same container." }
+      ],
+      "correct": ["B"],
+      "points": 1.3
+    },
+    {
+      "id": 59,
+      "type": "essay",
+      "text": "Explain the dispute between the Tzlach and Rav Chaim Naeh regarding the calculation of halachic measurements. What contradiction did the Tzlach find, how did he resolve it, and how did Rav Chaim Naeh disagree? Include what the Biur Halacha passkens lema'ase.",
+      "points": 7.5,
+      "modelAnswer": "The Tzlach discovered that the two Gemara-based calculations for determining the volume of challah (the egg-based calculation of 43.2 eggs and the thumb-width-based calculation of 311 cubic thumb widths) produced drastically different results – the thumb calculation came out to almost double the egg calculation. He concluded that eggs must have shrunk to half their original size since Chazal's time. Therefore, to be mafrish with today's eggs, you'd need about 86 eggs. The Chazon Ish agreed with this approach. Rav Chaim Naeh argued that eggs did not shrink; rather, the thumb width should be measured from the narrow section of the thumb (about 2cm) rather than the wider section. When measured this way, the two calculations align. The Biur Halacha passkens that for biblical mitzvos one should use the larger Tzlach measurement, and for rabbinic mitzvos the smaller Rav Chaim Naeh measurement may be used. Since hafrashas challah today is rabbinic, 43.2 of today's eggs (the Rav Chaim Naeh measurement) suffices."
+    },
+    {
+      "id": 60,
+      "type": "essay",
+      "text": "Describe the three main halachic differences between challah in Eretz Yisrael and challah in chutz la'aretz. For each difference, provide a practical example of when this would make a difference.",
+      "points": 7.5,
+      "modelAnswer": "1) Bitul ratios: In chutz la'aretz, S\"A permits challah mixed with bread even at 50-50; Rama requires 100:1 (min b'mino) or 60:1 (min b'she'eino mino). In EY, one may not deliberately be mevatel. Practical example: If separated challah accidentally fell back into the dough in chutz la'aretz, it's easily nullified. 2) Eating before being mafrish: In chutz la'aretz, if you forgot, you may eat the bread and leave over a small piece to be mafrish from later. In EY, you may NOT eat before being mafrish. Practical example: If on Shabbos you forgot to be mafrish – in chutz la'aretz you eat and leave over; in EY you must borrow from a neighbor. 3) Hafrasha shelo min hamukaf: In chutz la'aretz, you may be mafrish from bread before you to cover bread not present, as long as it's from the same batch. In EY, you should only be mafrish from bread that is in front of you. Practical example: If you sent loaves to another location and they're from the same batch, in chutz la'aretz you can be mafrish from your loaves to cover the sent ones; in EY you should not."
+    },
+    {
+      "id": 61,
+      "type": "essay",
+      "text": "Explain why the weight required for hafrashas challah varies so much between poskim (1.2 kg, 1.56 kg, 1.66 kg, 2.25 kg). Include the reasoning behind each number and which authority holds each position.",
+      "points": 7.5,
+      "modelAnswer": "The variation stems from how the volume of 43.2 eggs is converted to a weight, and whether the eggs of Chazal's time were the same size as today's. 1.2 kg – All agree to be mafrish without a bracha. This corresponds to the volume of 43.2 modern eggs converted to flour weight using Rav Chaim Naeh's smaller egg volume. The SSK uses this as the lower bound. 1.56 kg – Rav Ovadya Yosef – based on the Rambam who converts the volume to 520 Egyptian dirhams. A talmid chachom traveled to Egypt and found that dirhams never weighed more than 3 grams, so 520 × 3g = 1560g. 1.66 kg – Rav Chaim Naeh – who calculated each egg today as 57.6 cc, making 43.2 eggs = 2488 cc. Using packed flour's weight ratio (1/3 less than water), the weight comes to 1.66 kg. RSZA, Rav Wosner, and the custom in Yerushalayim follow this. 2.25 kg – Chazon Ish – who follows the Tzlach that eggs shrank to half their original size. Therefore the volume is doubled (4320 cc) and with flour weighing 52% of water = 2.25 kg. The Steipler and Rav Chaim Kanievsky followed this, and it is the common practice in chutz la'aretz where people use 5 lbs or more."
+    },
+    {
+      "id": 62,
+      "type": "essay",
+      "text": "A family in Eretz Yisrael forgot to be mafrish challah from their matzah before Pesach. It is now Pesach night. Discuss the three solutions suggested by the poskim for how they can eat their matzah on the Seder night.",
+      "points": 7.5,
+      "modelAnswer": "1) RSZA (quoted in Shemiras Shabbos Kehilchasa): In EY, if there is no other way to get kosher matzah, one may be mafrish on Pesach in order to fulfill the biblical mitzvah of eating matzah. It is best to do so mentally without a bracha. This is because we do not push off a biblical mitzvah (eating matzah) for a rabbinic concern (metaken on Yom Tov). 2) Chalas Lechem: Based on two halachos – a) a child may violate a derabanan for his own sake (Biur Halacha), and b) a katan whose oaths are binding can perform valid terumah (Rambam). Therefore, give the matzah as a gift to a child (12-year-old boy or 11-year-old girl) and have them be mafrish. Since their hafrasha is valid, everyone else can benefit from the matzah. 3) RSZA himself used to be mafrish before Pesach on behalf of his entire community in Shaarei Chessed, having in mind all who might forget. This works based on the principle that a Chaver may violate a smaller prohibition (hafrasha from one location to another) to prevent the masses from transgressing the greater prohibition of eating tevel. However, the Chakat HaPesach cautions that if the Rav is mafrish in the morning and someone else is mafrish later in the day, the Rav's hafrasha is no longer relevant, and the later person may recite a bracha levatallah."
+    },
+    {
+      "id": 63,
+      "type": "essay",
+      "text": "Describe the three scenarios of combining different grains for hafrashas challah. For each scenario, explain the halachic rule and give examples of which grains can or cannot combine.",
+      "points": 7.5,
+      "modelAnswer": "There are three distinct scenarios: 1) Grains mixed in flour form (before becoming dough, or kneaded together after): ALL five grains combine with each other. For example, if you mix 800g of wheat flour with 500g of spelt flour before adding water, and the total exceeds the shiur, you are obligated. This is based on Mishnah Challah 1:1 which teaches all grains combine. 2) Two separate batches of dough, each below the shiur, touching each other: Only specific pairings combine. Spelt is unique – it combines with ALL other grains. Wheat only combines with itself and spelt. Barley combines with everything except wheat. Rye combines with everything except wheat and oats. Oats combine with everything except wheat and rye. This is based on Mishnah Challah 4:2. 3) Two separate batches, each independently at the shiur of challah: You may only be mafrish from one for the other if they are from the same grain, OR from spelt to rye (and vice versa), OR from barley to oats (and vice versa) – because these are the pairings that are not kilayim with each other (Mishnah Terumos 2:4 and Kilayim 1:1)."
+    }
+  ]
+}

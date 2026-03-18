@@ -1,0 +1,17 @@
+# Converted markdown files (generated from .docx via pypandoc)
+sources/*.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+*.swo
