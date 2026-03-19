@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCP Test Prep – Stats</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(69, 79, 89);
+  background: rgb(245, 245, 245);
+  line-height: 1.5;
+}
+.container { max-width: 700px; margin: 0 auto; padding: 20px 16px; }
+.card {
+  background: #fff;
+  border: 1px solid rgb(217, 218, 218);
+  border-radius: 4px;
+  padding: 24px 20px;
+  margin-bottom: 16px;
+}
+h1 { font-size: 20px; margin-bottom: 4px; text-align: center; }
+h2 { font-size: 15px; margin-bottom: 12px; color: rgb(69, 79, 89); }
+.subtitle { text-align: center; color: rgb(140, 140, 140); font-size: 12px; margin-bottom: 20px; }
+
+/* Stats grid */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.stat-box {
+  text-align: center;
+  padding: 14px 8px;
+  background: rgb(245, 245, 245);
+  border-radius: 6px;
+}
+.stat-box .val { font-size: 22px; font-weight: bold; color: rgb(69, 79, 89); }
+.stat-box .lbl { font-size: 11px; color: rgb(140, 140, 140); margin-top: 2px; }
+
+/* Mode breakdown bar */
+.mode-bar { display: flex; height: 24px; border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
+.mode-bar .exam-seg { background: #3b82f6; }
+.mode-bar .practice-seg { background: #22c55e; }
+.mode-legend { display: flex; gap: 16px; font-size: 11px; color: rgb(120,120,120); margin-bottom: 4px; }
+.mode-legend span::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+.mode-legend .exam::before { background: #3b82f6; }
+.mode-legend .practice::before { background: #22c55e; }
+
+/* Wrong questions table */
+.wrong-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.wrong-table th { text-align: left; font-weight: bold; padding: 6px 8px; border-bottom: 2px solid rgb(217,218,218); font-size: 12px; color: rgb(120,120,120); }
+.wrong-table td { padding: 6px 8px; border-bottom: 1px solid rgb(240,240,240); }
+.wrong-table tr:hover td { background: rgb(250,250,250); }
+.wrong-count { font-weight: bold; color: #dc2626; text-align: center; min-width: 36px; }
+
+/* History table */
+.history-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.history-table th { text-align: left; font-weight: bold; padding: 6px 8px; border-bottom: 2px solid rgb(217,218,218); font-size: 11px; color: rgb(120,120,120); }
+.history-table td { padding: 6px 8px; border-bottom: 1px solid rgb(240,240,240); }
+.history-table tr:hover td { background: rgb(250,250,250); }
+
+/* Buttons */
+.btn { display: inline-block; padding: 8px 18px; border: none; border-radius: 4px; font-family: inherit; font-size: 13px; cursor: pointer; }
+.btn-danger { background: #dc2626; color: #fff; }
+.btn-danger:hover { background: #b91c1c; }
+.btn-outline { background: transparent; border: 1px solid rgb(217,218,218); color: rgb(100,100,100); }
+.btn-outline:hover { background: rgb(245,245,245); }
+.btn-row { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+
+.empty-msg { text-align: center; color: rgb(160,160,160); padding: 30px 10px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Usage Stats</h1>
+    <p class="subtitle">Per-device tracking (localStorage) &middot; Not shared across browsers</p>
+  </div>
+
+  <!-- Overview -->
+  <div class="card" id="overview-card">
+    <h2>Overview</h2>
+    <div class="stat-grid" id="stat-grid"></div>
+  </div>
+
+  <!-- Mode Breakdown -->
+  <div class="card" id="mode-card">
+    <h2>Mode Breakdown</h2>
+    <div class="mode-bar" id="mode-bar"></div>
+    <div class="mode-legend">
+      <span class="exam">Exam</span>
+      <span class="practice">Practice</span>
+    </div>
+  </div>
+
+  <!-- Most-Missed Questions -->
+  <div class="card" id="wrong-card">
+    <h2>Most-Missed Questions</h2>
+    <div id="wrong-list"></div>
+  </div>
+
+  <!-- Recent History -->
+  <div class="card" id="history-card">
+    <h2>Recent Test History</h2>
+    <div id="history-list"></div>
+  </div>
+
+  <!-- Actions -->
+  <div class="card">
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="location.href='index.html'">Back to Test</button>
+      <button class="btn btn-danger" onclick="clearStats()">Clear All Stats</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let questionsMap = {}; // id -> { text, type }
+
+async function loadQuestions() {
+  try {
+    const res = await fetch('tests/z17-test.json');
+    const data = await res.json();
+    data.questions.forEach(q => {
+      questionsMap[q.id] = { text: q.text, type: q.type };
+    });
+  } catch(e) {}
+}
+
+function getLog() {
+  try { return JSON.parse(localStorage.getItem('scp_stats') || '[]'); }
+  catch(e) { return []; }
+}
+function getWrong() {
+  try { return JSON.parse(localStorage.getItem('scp_stats_wrong') || '{}'); }
+  catch(e) { return {}; }
+}
+
+function renderStats() {
+  const log = getLog();
+  const wrong = getWrong();
+
+  const visits = log.filter(e => e.type === 'visit').length;
+  const starts = log.filter(e => e.type === 'test_start').length;
+  const completions = log.filter(e => e.type === 'test_complete');
+  const completed = completions.length;
+
+  // Averages
+  let avgScore = 0, avgPct = 0, avgTime = 0, passCount = 0;
+  if (completed > 0) {
+    const totalScore = completions.reduce((s, e) => s + (e.data.pct || 0), 0);
+    avgPct = Math.round(totalScore / completed);
+    avgScore = (completions.reduce((s, e) => s + (e.data.score || 0), 0) / completed).toFixed(1);
+    avgTime = Math.round(completions.reduce((s, e) => s + (e.data.duration || 0), 0) / completed);
+    passCount = completions.filter(e => (e.data.pct || 0) >= 70).length;
+  }
+
+  const examStarts = log.filter(e => e.type === 'test_start' && e.data.mode === 'exam').length;
+  const practiceStarts = log.filter(e => e.type === 'test_start' && e.data.mode === 'practice').length;
+
+  // Overview grid
+  const grid = document.getElementById('stat-grid');
+  const stats = [
+    { val: visits, lbl: 'Visits' },
+    { val: starts, lbl: 'Tests Started' },
+    { val: completed, lbl: 'Tests Completed' },
+    { val: completed > 0 ? avgPct + '%' : '—', lbl: 'Avg Score' },
+    { val: completed > 0 ? passCount + '/' + completed : '—', lbl: 'Pass Rate (≥70%)' },
+    { val: completed > 0 ? fmtTime(avgTime) : '—', lbl: 'Avg Time' },
+  ];
+  grid.innerHTML = stats.map(s =>
+    '<div class="stat-box"><div class="val">' + s.val + '</div><div class="lbl">' + s.lbl + '</div></div>'
+  ).join('');
+
+  // Mode bar
+  const bar = document.getElementById('mode-bar');
+  const totalStarts = examStarts + practiceStarts;
+  if (totalStarts > 0) {
+    const ePct = Math.round((examStarts / totalStarts) * 100);
+    const pPct = 100 - ePct;
+    bar.innerHTML = '<div class="exam-seg" style="width:' + ePct + '%" title="Exam: ' + examStarts + '"></div>'
+                  + '<div class="practice-seg" style="width:' + pPct + '%" title="Practice: ' + practiceStarts + '"></div>';
+  } else {
+    bar.innerHTML = '<div style="width:100%;background:rgb(230,230,230);"></div>';
+  }
+
+  // Wrong questions (top 10)
+  const wrongList = document.getElementById('wrong-list');
+  const wrongEntries = Object.entries(wrong)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+
+  if (wrongEntries.length === 0) {
+    wrongList.innerHTML = '<p class="empty-msg">No wrong answers recorded yet.</p>';
+  } else {
+    let tbl = '<table class="wrong-table"><thead><tr><th>#</th><th>Question</th><th>Wrong</th></tr></thead><tbody>';
+    wrongEntries.forEach(([qid, count], i) => {
+      const q = questionsMap[qid];
+      let text = qid;
+      if (q) {
+        text = q.text.length > 100 ? q.text.substring(0, 100) + '…' : q.text;
+        text = escHtml(text);
+      }
+      tbl += '<tr><td>' + (i + 1) + '</td><td>' + text + '</td><td class="wrong-count">' + count + '</td></tr>';
+    });
+    tbl += '</tbody></table>';
+    wrongList.innerHTML = tbl;
+  }
+
+  // Recent history (last 20)
+  const historyList = document.getElementById('history-list');
+  const recent = completions.slice(-20).reverse();
+  if (recent.length === 0) {
+    historyList.innerHTML = '<p class="empty-msg">No completed tests yet.</p>';
+  } else {
+    let tbl = '<table class="history-table"><thead><tr><th>Date</th><th>Mode</th><th>Score</th><th>Time</th><th>Answered</th></tr></thead><tbody>';
+    recent.forEach(e => {
+      const d = new Date(e.ts);
+      const dateStr = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const mode = (e.data.mode || 'exam').charAt(0).toUpperCase() + (e.data.mode || 'exam').slice(1);
+      const score = (e.data.pct || 0) + '%';
+      const time = fmtTime(e.data.duration || 0);
+      const ans = (e.data.answered || 0) + '/' + (e.data.total || '?');
+      tbl += '<tr><td>' + dateStr + '</td><td>' + mode + '</td><td>' + score + '</td><td>' + time + '</td><td>' + ans + '</td></tr>';
+    });
+    tbl += '</tbody></table>';
+    historyList.innerHTML = tbl;
+  }
+}
+
+function clearStats() {
+  if (!confirm('Clear all usage stats? This cannot be undone.')) return;
+  localStorage.removeItem('scp_stats');
+  localStorage.removeItem('scp_stats_wrong');
+  renderStats();
+}
+
+function fmtTime(sec) {
+  const h = String(Math.floor(sec / 3600)).padStart(2, '0');
+  const m = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
+  const s = String(sec % 60).padStart(2, '0');
+  return h + ':' + m + ':' + s;
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Init
+loadQuestions().then(renderStats);
+</script>
+</body>
+</html>

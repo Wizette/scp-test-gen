@@ -775,6 +775,7 @@ function startTest() {
   document.getElementById('header-bar').style.display = 'block';
   timerStart = Date.now();
   timerInterval = setInterval(updateTimer, 1000);
+  trackEvent('test_start', { mode: testMode });
   buildGrid();
   goQuestion(0);
 }
@@ -1054,6 +1055,27 @@ function finishTest() {
   const elapsed = Math.floor((Date.now() - timerStart) / 1000);
   document.getElementById('res-duration').textContent = fmtTime(elapsed);
 
+  // Track completion stats and wrong answers
+  const answered = testData.questions.filter(q => isAnswered(q.id)).length;
+  let objScore = 0;
+  const totalPts = testData.questions.reduce((s, q) => s + q.points, 0);
+  testData.questions.forEach(q => {
+    const pts = scoreQuestion(q);
+    if (pts !== null) {
+      objScore += pts;
+      if (pts < q.points) trackWrong(q.id);
+    }
+  });
+  trackEvent('test_complete', {
+    mode: testMode,
+    duration: elapsed,
+    score: objScore,
+    totalPts: totalPts,
+    pct: Math.round((objScore / totalPts) * 100),
+    answered: answered,
+    total: testData.questions.length
+  });
+
   renderResults();
 }
 
@@ -1215,6 +1237,23 @@ function retakeTest() {
   document.getElementById('pw-input').focus();
 }
 
+/* ── Usage Tracking ──────────────────────────────── */
+function trackEvent(type, data) {
+  try {
+    const log = JSON.parse(localStorage.getItem('scp_stats') || '[]');
+    log.push({ type, data: data || {}, ts: new Date().toISOString() });
+    if (log.length > 500) log.splice(0, log.length - 500);
+    localStorage.setItem('scp_stats', JSON.stringify(log));
+  } catch(e) { /* quota exceeded or private mode */ }
+}
+function trackWrong(questionId) {
+  try {
+    const map = JSON.parse(localStorage.getItem('scp_stats_wrong') || '{}');
+    map[questionId] = (map[questionId] || 0) + 1;
+    localStorage.setItem('scp_stats_wrong', JSON.stringify(map));
+  } catch(e) {}
+}
+
 /* ── Password Gate ───────────────────────────────── */
 const PASS_HASH = '1b197e02e5ef7b3530b61de13cc7abfb2bfe497d0b714b9a14dc24b65f8f6539';
 
@@ -1229,6 +1268,7 @@ async function checkPassword(e) {
   const hash = await sha256(pw);
   if (hash === PASS_HASH) {
     sessionStorage.setItem('scp_auth', '1');
+    trackEvent('visit');
     document.getElementById('password-screen').style.display = 'none';
     document.getElementById('start-screen').style.display = 'block';
   } else {
