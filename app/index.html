@@ -951,6 +951,12 @@ function renderSourceRef(q, isEssay) {
   if (isEssay) {
     html += '<div class="model-answer-toggle" onclick="this.nextElementSibling.classList.toggle(\'open\')">▶ Show model answer</div>';
     html += '<div class="model-answer-box">' + escHtml(q.modelAnswer) + '</div>';
+    html += '<div class="essay-self-grade" style="margin-top:10px;">'
+         + '<p style="font-size:12px;color:rgb(140,140,140);margin-bottom:6px;line-height:1.5;">'
+         + 'Compare your answer to the model answer above and rate your response '
+         + '(0 = missed key points, ' + q.points + ' = fully correct):</p>'
+         + '<label>Self-grade: <input type="number" min="0" max="' + q.points + '" step="0.5" '
+         + 'value="0" id="practice-grade-' + q.id + '"> / ' + q.points + '</label></div>';
   }
   html += '<div class="source-ref" style="margin-top:10px;">';
   html += '<div class="source-heading">📚 Source Reference</div>';
