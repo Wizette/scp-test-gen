@@ -868,8 +868,11 @@ function renderQuestion() {
   const isLocked = testMode === 'practice' && isRevealed && q.type !== 'essay';
 
   if (q.type === 'essay') {
+    const essayMsg = testMode === 'practice'
+      ? 'Write your answer below, then click "Show Model Answer" to compare and review.'
+      : 'Write your answer below. After finishing the test, you will be shown a model answer to compare against and asked to self-grade your response.';
     html += '<p style="font-size:12px;color:rgb(140,140,140);margin-bottom:8px;line-height:1.5;">'
-         + 'Write your answer below. After finishing the test, you will be shown a model answer to compare against and asked to self-grade your response.</p>';
+         + essayMsg + '</p>';
     const val = answers[q.id] || '';
     html += '<textarea class="essay-area" id="essay-input" oninput="onEssayInput(this)"'
          + ' placeholder="Type your answer here…">' + escHtml(val) + '</textarea>';
