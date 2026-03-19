@@ -868,6 +868,8 @@ function renderQuestion() {
   const isLocked = testMode === 'practice' && isRevealed && q.type !== 'essay';
 
   if (q.type === 'essay') {
+    html += '<p style="font-size:12px;color:rgb(140,140,140);margin-bottom:8px;line-height:1.5;">'
+         + 'Write your answer below. After finishing the test, you will be shown a model answer to compare against and asked to self-grade your response.</p>';
     const val = answers[q.id] || '';
     html += '<textarea class="essay-area" id="essay-input" oninput="onEssayInput(this)"'
          + ' placeholder="Type your answer here…">' + escHtml(val) + '</textarea>';
@@ -1145,6 +1147,9 @@ function renderResults() {
                 + '</div></div>';
       }
       ansHtml += '<div class="essay-self-grade">'
+              + '<p style="font-size:12px;color:rgb(140,140,140);margin-bottom:6px;line-height:1.5;">'
+              + 'Compare your answer to the model answer above and rate your response '
+              + '(0 = missed key points, ' + q.points + ' = fully correct):</p>'
               + '<label>Self-grade: <input type="number" min="0" max="' + q.points + '" step="0.5" '
               + 'value="0" onchange="updateEssayScore(this, ' + q.id + ', ' + q.points + ')"> / ' + q.points + '</label></div>';
     } else {
