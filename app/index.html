@@ -762,14 +762,69 @@ function populateStartScreen() {
   document.getElementById('start-title').textContent = testData.title;
   document.getElementById('start-subtitle').textContent = testData.subtitle || testData.instructor || '';
   document.getElementById('start-session').textContent = testData.session || '';
-  document.getElementById('start-qcount').textContent = testData.questions.length;
-  const totalPts = testData.questions.reduce((s, q) => s + q.points, 0);
-  document.getElementById('start-points').textContent = totalPts.toFixed(1);
+  const cfg = testData.testConfig;
+  const testSize = cfg ? cfg.totalTestSize : testData.questions.length;
+  document.getElementById('start-qcount').textContent = testSize;
+  const testPts = cfg
+    ? (testSize - cfg.essayCount) * 1.3 + cfg.essayCount * 7.5
+    : testData.questions.reduce((s, q) => s + q.points, 0);
+  document.getElementById('start-points').textContent = testPts.toFixed(1);
   document.getElementById('hdr-title').textContent = testData.title;
+}
+
+/* ── Build Randomized Test Subset ────────────────── */
+function buildTestSubset() {
+  if (!testData.testConfig) return;
+  const cfg = testData.testConfig;
+  testData._pool = testData.questions.slice();
+
+  const essays = testData.questions.filter(q => q.type === 'essay');
+  const objective = testData.questions.filter(q => q.type !== 'essay');
+
+  function sectionKey(q) {
+    const s = q.sourceRef ? q.sourceRef.section : '';
+    if (s.startsWith('TUM-')) return s.split('.')[0];
+    const letter = s.charAt(0);
+    return (letter >= 'A' && letter <= 'H') ? 'Challah-' + letter : 'Other';
+  }
+
+  const bySection = {};
+  objective.forEach(q => {
+    const key = sectionKey(q);
+    if (!bySection[key]) bySection[key] = [];
+    bySection[key].push(q);
+  });
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  const picked = [];
+  Object.keys(cfg.sectionQuotas).forEach(sec => {
+    const pool = shuffle((bySection[sec] || []).slice());
+    picked.push(...pool.slice(0, cfg.sectionQuotas[sec]));
+  });
+
+  const secOrder = Object.keys(cfg.sectionQuotas);
+  picked.sort((a, b) => {
+    const sa = secOrder.indexOf(sectionKey(a));
+    const sb = secOrder.indexOf(sectionKey(b));
+    return sa !== sb ? sa - sb : a.id - b.id;
+  });
+
+  const pickedEssays = shuffle(essays.slice()).slice(0, cfg.essayCount);
+  const subset = [...picked, ...pickedEssays];
+  subset.forEach((q, i) => { q.id = i + 1; });
+  testData.questions = subset;
 }
 
 /* ── Start Test ──────────────────────────────────── */
 function startTest() {
+  buildTestSubset();
   document.getElementById('start-screen').style.display = 'none';
   document.getElementById('question-screen').style.display = 'block';
   document.getElementById('header-bar').style.display = 'block';
@@ -1227,6 +1282,7 @@ function updateTotalScore() {
 
 /* ── Retake ──────────────────────────────────────── */
 function retakeTest() {
+  if (testData._pool) testData.questions = testData._pool;
   answers = {};
   bookmarks = new Set();
   revealed = new Set();

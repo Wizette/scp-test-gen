@@ -1,9 +1,20 @@
 {
-  "title": "Hilchos Hafrashas Challah",
+  "title": "Hilchos Hafrashas Challah & Terumos U'Ma'asros",
   "subtitle": "Rav Elyada Goldwicht",
   "session": "Summer 2025",
   "instructor": "Rav Elyada Goldwicht",
-  "totalQuestions": 63,
+  "totalQuestions": 125,
+  "testConfig": {
+    "sectionQuotas": {
+      "Challah-A": 3, "Challah-B": 2, "Challah-C": 5, "Challah-D": 3,
+      "Challah-E": 4, "Challah-F": 6, "Challah-G": 4, "Challah-H": 3,
+      "TUM-A": 2, "TUM-B": 5, "TUM-C": 2, "TUM-D": 4,
+      "TUM-E": 3, "TUM-F": 1, "TUM-G": 1, "TUM-H": 2,
+      "TUM-I": 1, "TUM-J": 2, "TUM-K": 2, "TUM-L": 1, "TUM-M": 2
+    },
+    "essayCount": 5,
+    "totalTestSize": 63
+  },
   "questions": [
     {
       "id": 1,
@@ -1091,6 +1102,1084 @@
         "section": "H. Combining Flour from Different Grains",
         "page": 20,
         "snippet": "Three scenarios: 1) Mixed as flour → all 5 combine. 2) Separate doughs touching → only specific pairings (spelt combines with all). 3) Each has shiur → only same grain or non-kilayim pairs (spelt↔rye, barley↔oats)."
+      }
+    },
+    {
+      "id": 64,
+      "type": "mc",
+      "text": "The Midrash Tanchuma teaches that one who eats tevel (produce from which tu\"m has not been separated) is considered as if he ate:",
+      "options": [
+        { "label": "A", "text": "Chametz on Pesach." },
+        { "label": "B", "text": "Treif." },
+        { "label": "C", "text": "On Yom Kippur." },
+        { "label": "D", "text": "Kodshim outside the Beis HaMikdash." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-A. Introduction to Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.1",
+        "snippet": "The Midrash Tanchuma (Re'eh 17) teaches that one who eats tevel, it is like eating treif."
+      }
+    },
+    {
+      "id": 65,
+      "type": "mc",
+      "text": "The Aderes writes that one who learns the halachos of tu\"m, even if he lives in chutz la'aretz, it is as if he:",
+      "options": [
+        { "label": "A", "text": "Visited Eretz Yisrael." },
+        { "label": "B", "text": "Was mafrish tu\"m." },
+        { "label": "C", "text": "Built the Beis HaMikdash." },
+        { "label": "D", "text": "Ate ma'aser sheini in Yerushalayim." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-A. Introduction to Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.1",
+        "snippet": "The No'am Halacha quotes the Aderes who writes that just as learning hilchos korban chatas is as if he offered it, so too learning tu\"m is as if he was mafrish tu\"m."
+      }
+    },
+    {
+      "id": 66,
+      "type": "mc",
+      "text": "The Gemara Ta'anis learns from the passuk \"aser te'aser\" that properly giving tu\"m is a segulah for:",
+      "options": [
+        { "label": "A", "text": "Long life." },
+        { "label": "B", "text": "Many children." },
+        { "label": "C", "text": "Wealth (parnassah)." },
+        { "label": "D", "text": "Entering Eretz Yisrael." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-A. Introduction to Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.1",
+        "snippet": "The Gemara Ta'anis (9a) learns from 'aser te'aser' (Devarim 14:22) that one becomes wealthy by properly giving tu\"m (aser bishvil she'tisasher)."
+      }
+    },
+    {
+      "id": 67,
+      "type": "mc",
+      "text": "Terumah gedolah is given to the kohen. According to the Rambam, who decides which kohen receives the terumah?",
+      "options": [
+        { "label": "A", "text": "The Beis Din." },
+        { "label": "B", "text": "The kohen gadol." },
+        { "label": "C", "text": "The Yisrael owner of the produce – he may give it to whichever kohen he prefers." },
+        { "label": "D", "text": "It is distributed equally among all kohanim in the city." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.2",
+        "snippet": "The Rambam (Terumos 12:15) passkens that the Yisrael owner has the right to give the terumah to whichever kohen he prefers."
+      }
+    },
+    {
+      "id": 68,
+      "type": "mc",
+      "text": "Biblically, the minimum amount of terumah gedolah that must be given is:",
+      "options": [
+        { "label": "A", "text": "1/40 of the produce." },
+        { "label": "B", "text": "1/50 of the produce." },
+        { "label": "C", "text": "1/60 of the produce." },
+        { "label": "D", "text": "Any amount, even the smallest amount." }
+      ],
+      "correct": ["D"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.2",
+        "snippet": "The Rambam (Terumos 3:1-2) teaches that biblically one can fulfill his obligation by giving any amount, even the smallest amount. However, Chazal gave gradations: generous = 1/40, average = 1/50, stingy = 1/60."
+      }
+    },
+    {
+      "id": 69,
+      "type": "mc",
+      "text": "According to Chazal, a person with a generous eye gives what fraction of his produce as terumah gedolah?",
+      "options": [
+        { "label": "A", "text": "1/10." },
+        { "label": "B", "text": "1/40 (2.5%)." },
+        { "label": "C", "text": "1/50 (2%)." },
+        { "label": "D", "text": "1/60 (1.6%)." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.2",
+        "snippet": "Chazal gave gradations: a generous person gives 1/40 (2.5%), an average person gives 1/50 (2%), and a stingy person gives 1/60 (1.6%)."
+      }
+    },
+    {
+      "id": 70,
+      "type": "mc",
+      "text": "Ma'aser rishon is given to the levi. What is the required amount?",
+      "options": [
+        { "label": "A", "text": "10% of the total produce." },
+        { "label": "B", "text": "10% of the remaining produce after terumah gedolah is separated." },
+        { "label": "C", "text": "1% of the total produce." },
+        { "label": "D", "text": "Any amount the owner wishes." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.3",
+        "snippet": "Tosfos in Sukkah (23b) explains that the 10% comes off the remaining produce after the terumah gedolah is given to the kohen (not 10% of the total)."
+      }
+    },
+    {
+      "id": 71,
+      "type": "tf",
+      "text": "True (A) or False (B): When Ezra returned to Eretz Yisrael and none of the levi'im came along, he fined them by giving the ma'aser rishon to kohanim instead.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.3",
+        "snippet": "Since the ma'aser rishon has no kedusha and can be eaten by anyone, when Ezra came back and none of the levi'im came along, he fined them and gave the ma'aser rishon to kohanim."
+      }
+    },
+    {
+      "id": 72,
+      "type": "mc",
+      "text": "Terumas ma'aser is separated from ma'aser rishon. What percentage of the original produce (after terumah gedolah) does terumas ma'aser represent?",
+      "options": [
+        { "label": "A", "text": "10%." },
+        { "label": "B", "text": "2%." },
+        { "label": "C", "text": "1% (10% of 10%)." },
+        { "label": "D", "text": "0.1%." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.3",
+        "snippet": "The kohen receives 10% of the 10% separated for the levi, or 1% of all the owner's produce (after terumah gedolah was taken)."
+      }
+    },
+    {
+      "id": 73,
+      "type": "mc",
+      "text": "The Rambam teaches that there is a biblical commandment to separate tu\"m in a specific order. What is the correct order?",
+      "options": [
+        { "label": "A", "text": "Ma'aser rishon → Terumah gedolah → Terumas ma'aser → Ma'aser sheini/ani." },
+        { "label": "B", "text": "Terumah gedolah → Ma'aser rishon → Ma'aser sheini/ani." },
+        { "label": "C", "text": "Ma'aser sheini → Terumah gedolah → Ma'aser rishon." },
+        { "label": "D", "text": "Terumah gedolah → Ma'aser rishon → Terumas ma'aser → Ma'aser sheini/ani." }
+      ],
+      "correct": ["D"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.2",
+        "snippet": "The Rambam (Terumos 3:23) teaches that there is a biblical commandment to separate in order: First terumah gedolah, followed by ma'aser rishon, and then either ma'aser sheini or ma'aser ani."
+      }
+    },
+    {
+      "id": 74,
+      "type": "mc",
+      "text": "According to the Tosfos quoting the Sefri, what is the purpose of ma'aser sheini?",
+      "options": [
+        { "label": "A", "text": "To support the kohanim financially." },
+        { "label": "B", "text": "To ensure that one spends time in Yerushalayim seeing kohanim and levi'im dedicated to avodas Hashem, which will inspire Torah learning and yiras shamayim." },
+        { "label": "C", "text": "To provide food for the poor." },
+        { "label": "D", "text": "To ensure that produce is not wasted." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.4",
+        "snippet": "Tosfos in Bava Basra (21a) quotes the Sefri: the purpose of ma'aser sheini is for one to spend time in Yerushalayim seeing kohanim and levi'im dedicated to avodas Hashem, inspiring Torah learning and yiras shamayim."
+      }
+    },
+    {
+      "id": 75,
+      "type": "mc",
+      "text": "When one redeems his own ma'aser sheini, he must add a chomesh (20%). How is this 20% calculated?",
+      "options": [
+        { "label": "A", "text": "20% of the original value – e.g., fruit worth 100 shekel is redeemed for 120." },
+        { "label": "B", "text": "20% calculated after the amount is added (chomesh milbar) – e.g., fruit worth 100 shekel is redeemed for 125." },
+        { "label": "C", "text": "An additional 25% of the fruit's value." },
+        { "label": "D", "text": "Both B and C are correct descriptions of the same calculation." }
+      ],
+      "correct": ["D"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.4",
+        "snippet": "The chomesh is calculated after the amount is added (chomesh milbar). If your fruits are worth 100 shekel, you need to redeem for 125 shekel, where 20% of 125 is 25. This is equivalent to adding 25% of the original value."
+      }
+    },
+    {
+      "id": 76,
+      "type": "ms",
+      "text": "On which years of the shemittah cycle is ma'aser sheini separated? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "Years 1 and 2." },
+        { "label": "B", "text": "Year 3." },
+        { "label": "C", "text": "Years 4 and 5." },
+        { "label": "D", "text": "Year 6." }
+      ],
+      "correct": ["A", "C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.4",
+        "snippet": "Ma'aser sheini is given on years 1, 2, 4 and 5. Ma'aser ani is given on years 3 and 6. Only one of the two is given in any single year."
+      }
+    },
+    {
+      "id": 77,
+      "type": "mc",
+      "text": "The Sefri derives from the words \"shenas hama'aser\" that:",
+      "options": [
+        { "label": "A", "text": "Ma'aser must be separated every year without exception." },
+        { "label": "B", "text": "Only one of the two ma'asros (ma'aser sheini or ma'aser ani) can be given in a single year, not both." },
+        { "label": "C", "text": "Ma'aser sheini and ma'aser ani should both be given every year." },
+        { "label": "D", "text": "Ma'aser is only given during shemittah." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M p.5",
+        "snippet": "The Sefri (Devarim 57) learns from 'shenas hama'aser' that only one of the two ma'asros, ma'aser sheini or ma'aser ani, can fall out on a single year."
+      }
+    },
+    {
+      "id": 78,
+      "type": "ms",
+      "text": "What are the two main limitations that prevent us from separating tu\"m in the manner described in the Torah? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "Today we assume everyone is tamei, so terumah, terumas ma'aser and ma'aser sheini cannot be eaten." },
+        { "label": "B", "text": "We can no longer confidently identify genuine kohanim due to the length of the exile." },
+        { "label": "C", "text": "The Torah only requires tu\"m when there is a king." },
+        { "label": "D", "text": "Tu\"m can only be separated in the Beis HaMikdash." }
+      ],
+      "correct": ["A", "B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-C. Hafrashas Terumos and Ma'asros Today — Preparations",
+        "page": "TU'M p.6",
+        "snippet": "Two limitations: 1) Today everyone is assumed tamei. 2) The Maharashal writes that the lineage of the majority of kohanim has been mingled and we can no longer confidently identify genuine kohanim."
+      }
+    },
+    {
+      "id": 79,
+      "type": "mc",
+      "text": "For the hafrasha of tu\"m to take effect (be chal), two conditions must be met. What are they?",
+      "options": [
+        { "label": "A", "text": "You must recite a bracha and then burn the terumah." },
+        { "label": "B", "text": "You must verbally proclaim the produce as terumah/ma'aser (koreh shem) and identify its location in the pile." },
+        { "label": "C", "text": "You must give the produce to a kohen and have him eat it." },
+        { "label": "D", "text": "You must bring the produce to the Beis HaMikdash and make a declaration." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-C. Hafrashas Terumos and Ma'asros Today — Preparations",
+        "page": "TU'M p.6",
+        "snippet": "The tu\"m goes into effect once you identified its location in the pile and proclaimed it to be terumah or ma'aser. The bracha is recited before the proclamation because the proclamation is the actual mitzvah."
+      }
+    },
+    {
+      "id": 80,
+      "type": "mc",
+      "text": "The Rama passkens that before being mafrish tu\"m, you should wet the fruits. Why?",
+      "options": [
+        { "label": "A", "text": "To make them easier to separate." },
+        { "label": "B", "text": "So the fruits become tamei before the hafrasha – otherwise if the terumah is tahor, you can't throw it out (because it's tahor) and you can't give it to a kohen (because he is tamei)." },
+        { "label": "C", "text": "To ensure the bracha is valid." },
+        { "label": "D", "text": "Because dry fruit is exempt from tu\"m." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-C. Hafrashas Terumos and Ma'asros Today — Preparations",
+        "page": "TU'M p.6",
+        "snippet": "The Rama (siman 331:19) passkens that you must wet the fruits before hafrasha so they become tamei. Otherwise you're stuck: you can't throw out tahor terumah and you can't give it to a tamei kohen."
+      }
+    },
+    {
+      "id": 81,
+      "type": "mc",
+      "text": "Before reciting the nussach of the hafrasha, you need to set aside a portion of the produce. How much should you set aside?",
+      "options": [
+        { "label": "A", "text": "Exactly 10% for ma'aser rishon." },
+        { "label": "B", "text": "1% of all the produce, plus a bit more." },
+        { "label": "C", "text": "1/24 of the produce." },
+        { "label": "D", "text": "Half of the produce." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-C. Hafrashas Terumos and Ma'asros Today — Preparations",
+        "page": "TU'M p.7",
+        "snippet": "Set aside 1% plus a bit more. The 1% will be terumas ma'aser and the bit more will be terumah gedolah. These are separated from the rest because they may not be eaten."
+      }
+    },
+    {
+      "id": 82,
+      "type": "mc",
+      "text": "When saying the nussach for hafrashas tu\"m today, you only recite a bracha if:",
+      "options": [
+        { "label": "A", "text": "You are in Eretz Yisrael." },
+        { "label": "B", "text": "You are certain the produce before you is tevel (e.g., you took it from your own tree)." },
+        { "label": "C", "text": "The produce is worth more than a perutah." },
+        { "label": "D", "text": "You are a kohen or levi." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.7",
+        "snippet": "You will only recite a bracha if you are certain the produce is tevel (e.g., you took them off the tree in your house). The bracha is: 'Baruch... l'hafrish terumos u'ma'asros.'"
+      }
+    },
+    {
+      "id": 83,
+      "type": "mc",
+      "text": "In the nussach of terumah gedolah, you say: \"The amount that is greater than 1%, situated on the north side, will be terumah gedolah.\" What happens to the 1% itself at this point?",
+      "options": [
+        { "label": "A", "text": "It also becomes terumah gedolah." },
+        { "label": "B", "text": "It becomes ma'aser rishon." },
+        { "label": "C", "text": "It is not yet designated as anything." },
+        { "label": "D", "text": "It is immediately destroyed." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.7",
+        "snippet": "By reciting 'the amount greater than 1% on the north will be terumah gedolah,' you proclaimed the small extra amount as terumah gedolah. In the meantime, the 1% is not designated as anything."
+      }
+    },
+    {
+      "id": 84,
+      "type": "mc",
+      "text": "In the nussach for ma'aser rishon, you designate the 1% already set aside plus another 9% on the north. Together, these 10% become ma'aser rishon. What happens next to the 1%?",
+      "options": [
+        { "label": "A", "text": "It is given to the levi along with the other 9%." },
+        { "label": "B", "text": "It is proclaimed as terumas ma'aser and given to a kohen." },
+        { "label": "C", "text": "It is burned." },
+        { "label": "D", "text": "It is eaten by the owner." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.8",
+        "snippet": "After designating ma'aser rishon, the 1% already set aside is then proclaimed as terumas ma'aser: 'The 1% which I made into ma'aser rishon will now become terumas ma'aser.'"
+      }
+    },
+    {
+      "id": 85,
+      "type": "mc",
+      "text": "The Chazon Ish holds that we should not give terumah to kohanim or ma'aser rishon to a levi today because:",
+      "options": [
+        { "label": "A", "text": "There is no mitzvah to give tu\"m today." },
+        { "label": "B", "text": "We cannot be certain that today's kohanim and levi'im possess an unbroken and reliable lineage." },
+        { "label": "C", "text": "The levi'im were fined by Ezra and may never receive ma'aser again." },
+        { "label": "D", "text": "Only the Beis Din may distribute tu\"m." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.8",
+        "snippet": "The Derech Emunah quotes the Chazon Ish: we do not give terumah to kohanim or ma'aser rishon to levi'im because we cannot be certain of their unbroken lineage. Chazal were stringent with tu\"m since many might falsely claim to be kohanim."
+      }
+    },
+    {
+      "id": 86,
+      "type": "mc",
+      "text": "In Eretz Yisrael, it is customary to formally gift animals in certain zoos to kohanim and feed them tamei tu\"m. Where is this practiced?",
+      "options": [
+        { "label": "A", "text": "The Biblical Zoo in Jerusalem." },
+        { "label": "B", "text": "The Ramat Gan Safari." },
+        { "label": "C", "text": "The Tel Aviv Zoo." },
+        { "label": "D", "text": "This practice does not exist today." }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.9",
+        "snippet": "At the Biblical Zoo in Jerusalem, the animals are officially owned by kohanim, and farmers send their tu\"m there rather than discarding it, fulfilling the mitzvah of giving terumah to a kohen."
+      }
+    },
+    {
+      "id": 87,
+      "type": "mc",
+      "text": "There is a dispute between the Chazon Ish and RSZA regarding redeeming ma'aser sheini on a coin. The Chazon Ish holds that the fruit and the chomesh should be redeemed on:",
+      "options": [
+        { "label": "A", "text": "A single perutah that covers both." },
+        { "label": "B", "text": "A perutah for the fruit, plus an additional quarter perutah for the chomesh – because otherwise the fruit is redeemed on less than a perutah." },
+        { "label": "C", "text": "Two separate coins." },
+        { "label": "D", "text": "The actual monetary value of the fruit." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.9",
+        "snippet": "The Chazon Ish infers from Tosfos that the fruit needs to be redeemed on a perutah, while the chomesh needs a separate quarter perutah. If both redeemed on a single perutah, the fruit gets less than a perutah."
+      }
+    },
+    {
+      "id": 88,
+      "type": "mc",
+      "text": "A perutah chamurah is needed when your ma'aser sheini is worth less than a perutah. What makes a coin a perutah chamurah?",
+      "options": [
+        { "label": "A", "text": "It is made of gold." },
+        { "label": "B", "text": "It was previously used to redeem ma'aser sheini worth at least a perutah." },
+        { "label": "C", "text": "It is worth at least 10 shekel." },
+        { "label": "D", "text": "It was minted in Eretz Yisrael." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.10",
+        "snippet": "Chizkiyah teaches: if you already have a coin used to be podeh ma'aser sheini (ma'os rishonos), you may redeem less than a perutah on it. This coin is called a perutah chamurah."
+      }
+    },
+    {
+      "id": 89,
+      "type": "mc",
+      "text": "The Chazon Ish adds a further limitation to using a perutah chamurah. You may only use it to redeem ma'aser sheini worth less than a perutah if:",
+      "options": [
+        { "label": "A", "text": "The coin was used on Shabbos." },
+        { "label": "B", "text": "The previous redemption on the coin was from produce of equal or higher halachic requirement than the current produce." },
+        { "label": "C", "text": "The coin is made of silver." },
+        { "label": "D", "text": "You add a chomesh." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.11",
+        "snippet": "The Chazon Ish writes that you may only redeem ma'aser sheini worth less than a perutah if the coin was used for produce of equal or higher halachic requirement. You cannot redeem wine (biblical) using a coin that was used for cucumbers (rabbinic)."
+      }
+    },
+    {
+      "id": 90,
+      "type": "mc",
+      "text": "Biur ma'aser (removing all owed tu\"m from your house) must be performed on which years of the shemittah cycle?",
+      "options": [
+        { "label": "A", "text": "Years 1 and 4." },
+        { "label": "B", "text": "Years 3 and 6." },
+        { "label": "C", "text": "Years 4 and 7, on erev the last day of Pesach." },
+        { "label": "D", "text": "Every year before Rosh Hashana." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.12",
+        "snippet": "The Rambam writes that on years 4 and 7 of the shemittah cycle, on erev the last day of Pesach, one is obligated to ensure all owed tu\"m from the previous three years have been separated and given."
+      }
+    },
+    {
+      "id": 91,
+      "type": "mc",
+      "text": "Practically today, when performing biur ma'aser, the main thing that usually needs to be destroyed is:",
+      "options": [
+        { "label": "A", "text": "The terumah gedolah produce." },
+        { "label": "B", "text": "The ma'aser rishon produce." },
+        { "label": "C", "text": "The ma'aser sheini coin." },
+        { "label": "D", "text": "The ma'aser ani produce." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M p.13",
+        "snippet": "Practically today, in most cases the only thing that needs to be destroyed is the ma'aser sheini coin. If you are a member of an organization, they destroy it for you."
+      }
+    },
+    {
+      "id": 92,
+      "type": "mc",
+      "text": "The year of ma'aser for vegetables is determined by:",
+      "options": [
+        { "label": "A", "text": "When the vegetable reached one-third of its growth." },
+        { "label": "B", "text": "When the vegetable was picked." },
+        { "label": "C", "text": "Tu B'Shvat." },
+        { "label": "D", "text": "When the vegetable was planted." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.14",
+        "snippet": "Regarding vegetables, the determining factor is when it was picked. If picked before RH of year two, mafrish ma'aser sheini; if picked after RH, mafrish ma'aser ani."
+      }
+    },
+    {
+      "id": 93,
+      "type": "mc",
+      "text": "The year of ma'aser for grain and legumes (e.g., wheat, soy) is determined by:",
+      "options": [
+        { "label": "A", "text": "When it was picked/harvested." },
+        { "label": "B", "text": "When it was planted." },
+        { "label": "C", "text": "Whether it reached one-third of its growth before or after Rosh Hashana." },
+        { "label": "D", "text": "Tu B'Shvat." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.14",
+        "snippet": "Regarding grain and soy, the determining factor is whether they reached a third of their growth before or after Rosh Hashana (regardless of when they were picked)."
+      }
+    },
+    {
+      "id": 94,
+      "type": "mc",
+      "text": "The year of ma'aser for fruit trees is calculated from:",
+      "options": [
+        { "label": "A", "text": "Rosh Hashana, based on when picked." },
+        { "label": "B", "text": "Tu B'Shvat, based on whether it reached one-third of its growth before or after Tu B'Shvat." },
+        { "label": "C", "text": "Rosh Hashana, based on one-third growth." },
+        { "label": "D", "text": "Tu B'Shvat, based on when picked." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.14",
+        "snippet": "Trees are similar to grain in that the determining factor is whether they grew a third, but differ because years are calculated from Tu B'Shvat, not Rosh Hashana."
+      }
+    },
+    {
+      "id": 95,
+      "type": "mc",
+      "text": "An esrog is unique because it combines aspects of both trees and vegetables. How is its year determined?",
+      "options": [
+        { "label": "A", "text": "Like a tree: Tu B'Shvat, based on one-third growth." },
+        { "label": "B", "text": "Like a vegetable: Rosh Hashana, based on picking." },
+        { "label": "C", "text": "Tu B'Shvat (like a tree), but based on when it was picked (like a vegetable)." },
+        { "label": "D", "text": "Rosh Hashana (like a vegetable), but based on one-third growth (like grain)." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.15",
+        "snippet": "The Rambam explains that an esrog resembles a tree (years from Tu B'Shvat) but resembles a vegetable (year determined by picking time, not one-third growth)."
+      }
+    },
+    {
+      "id": 96,
+      "type": "mc",
+      "text": "There is a dispute about how to calculate the year of ma'aser for citrus fruits (oranges, lemons). The Chazon Ish passkens that:",
+      "options": [
+        { "label": "A", "text": "They follow the regular fruit tree rules." },
+        { "label": "B", "text": "They resemble esrogim, so we are machmir and give them the stringencies of both trees and vegetables." },
+        { "label": "C", "text": "They are exempt from tu\"m." },
+        { "label": "D", "text": "They follow the grain and soy rules." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.16",
+        "snippet": "The Chazon Ish passkens that citrus fruits resemble esrogim. We are machmir and give them stringencies of both: if growing and picking span different years, separate both ma'aser sheini and ma'aser ani."
+      }
+    },
+    {
+      "id": 97,
+      "type": "mc",
+      "text": "RSZA disagrees with the Chazon Ish about citrus fruits. He passkens that:",
+      "options": [
+        { "label": "A", "text": "Citrus fruits are calculated like other fruit trees – by one-third growth from Tu B'Shvat – and are NOT treated like esrogim." },
+        { "label": "B", "text": "Citrus are always ma'aser sheini." },
+        { "label": "C", "text": "Citrus are exempt from tu\"m." },
+        { "label": "D", "text": "Citrus follow the vegetable rules." }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M p.16",
+        "snippet": "RSZA passkens that lemons and citrus are calculated like other fruit trees and are not considered an esrog. He proves this from the Rambam who says 'only' an esrog follows picking time."
+      }
+    },
+    {
+      "id": 98,
+      "type": "tf",
+      "text": "True (A) or False (B): According to the Rambam, if you overestimate the amount of ma'aser rishon you need to give (e.g., give a full orange when only half was required), the remaining oranges are permitted, but the orange given as ma'aser rishon may not be eaten.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-F. Precisely Calculating the Amounts",
+        "page": "TU'M p.17",
+        "snippet": "The S\"A passkens that if one overestimates the ma'aser, the remaining fruits are permitted. However, the given orange may not be eaten since only half is ma'aser rishon and the other half remains tevel."
+      }
+    },
+    {
+      "id": 99,
+      "type": "mc",
+      "text": "If you carefully recite the standard nussach of hafrashas tu\"m, you will separate the exact amounts required, as long as you:",
+      "options": [
+        { "label": "A", "text": "Counted every single fruit." },
+        { "label": "B", "text": "Made sure you separated at least a bit more than 1% of the produce." },
+        { "label": "C", "text": "Used a certified scale." },
+        { "label": "D", "text": "Had a witness present." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-F. Precisely Calculating the Amounts",
+        "page": "TU'M p.17",
+        "snippet": "The Chukei De'ah points out that today, if you carefully recite the nussach and separate more than 1%, you are actually separating the exact amounts required."
+      }
+    },
+    {
+      "id": 100,
+      "type": "mc",
+      "text": "The Chazon Ish writes that if someone is away from home and doesn't have the full nussach, he should:",
+      "options": [
+        { "label": "A", "text": "Wait until he gets home." },
+        { "label": "B", "text": "Separate more than 1% and say 'the hafrashas tu\"m should be done as specified in the accepted nussach.'" },
+        { "label": "C", "text": "Not eat the produce." },
+        { "label": "D", "text": "Find a kohen to do it for him." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-G. Shortened Nussach & Allocating Location",
+        "page": "TU'M p.17",
+        "snippet": "The Chazon Ish writes that one should separate more than 1% and say that the hafrashas tu\"m should be done as specified in the accepted nussach."
+      }
+    },
+    {
+      "id": 101,
+      "type": "mc",
+      "text": "Why should the shortened nussach be used when being mafrish tu\"m from a liquid in motion (e.g., wine being poured)?",
+      "options": [
+        { "label": "A", "text": "Because liquids are exempt from the full nussach." },
+        { "label": "B", "text": "Because the liquid may shift between designations – the 'north' for ma'aser rishon may move to the 'south' and conflict with ma'aser sheini/ani." },
+        { "label": "C", "text": "Because the bracha is different for liquids." },
+        { "label": "D", "text": "Because liquid tu\"m is only rabbinic." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-G. Shortened Nussach & Allocating Location",
+        "page": "TU'M p.18",
+        "snippet": "The Derech Emunah explains that with moving liquid, after you allocate the 'north' for ma'aser rishon, it may shift to the 'south' and you can no longer allocate the south for ma'aser sheini. The shortened nussach makes all tu\"m take effect simultaneously."
+      }
+    },
+    {
+      "id": 102,
+      "type": "mc",
+      "text": "The Torah only lists three types of produce as being required in tu\"m. According to the Chazon Ish and the majority of poskim, only these are biblically obligated. What are they?",
+      "options": [
+        { "label": "A", "text": "Wheat, barley, and spelt." },
+        { "label": "B", "text": "Grain, wine, and oil." },
+        { "label": "C", "text": "All fruits and vegetables." },
+        { "label": "D", "text": "The five grains." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-H. Obligation Today",
+        "page": "TU'M p.18",
+        "snippet": "The Torah lists 'reshis degancha, tiroshcha v'yitzharecha' – grain, wine and oil. The Chazon Ish passkens like the majority that only these are biblically obligated. Other fruits are rabbinically obligated; vegetables are also rabbinic."
+      }
+    },
+    {
+      "id": 103,
+      "type": "tf",
+      "text": "True (A) or False (B): Only produce grown in Eretz Yisrael is obligated in hafrashas tu\"m.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-H. Obligation Today",
+        "page": "TU'M p.19",
+        "snippet": "The Rambam (Terumos 1:1) passkens that only produce grown in Eretz Yisrael is obligated in tu\"m. The Sha\"ch explains that any mitzvah dependent on the land only applies in Eretz Yisrael."
+      }
+    },
+    {
+      "id": 104,
+      "type": "mc",
+      "text": "What is the status of Eilat regarding hafrashas tu\"m?",
+      "options": [
+        { "label": "A", "text": "All agree it is part of Eretz Yisrael and requires hafrasha with a bracha." },
+        { "label": "B", "text": "The Chazon Ish passkens it is chutz la'aretz; others say to be mafrish without a bracha; the Ir HaKodesh says with a bracha." },
+        { "label": "C", "text": "Eilat is completely exempt from tu\"m." },
+        { "label": "D", "text": "Eilat follows the same halacha as Gaza." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-H. Obligation Today",
+        "page": "TU'M p.19",
+        "snippet": "The Chazon Ish passkens Eilat is chutz la'aretz. The Mo'adim U'Zmanim quotes Rav Epstein: mafrish without a bracha. The Ir HaKodesh passkens Eilat is part of EY – mafrish with a bracha."
+      }
+    },
+    {
+      "id": 105,
+      "type": "mc",
+      "text": "Regarding the dispute between the Rambam and the Ra'avad about the status of terumah today: the S\"A passkens that:",
+      "options": [
+        { "label": "A", "text": "Terumah is biblical today even without a majority in EY (like the Ra'avad)." },
+        { "label": "B", "text": "Terumah is only rabbinic today since the majority of Jews are not in EY (like the Rambam)." },
+        { "label": "C", "text": "Terumah does not apply at all today." },
+        { "label": "D", "text": "Terumah is biblical for grain but rabbinic for other produce." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-H. Obligation Today",
+        "page": "TU'M p.19",
+        "snippet": "The S\"A (siman 331:2) passkens like the Rambam that terumah is only rabbinic today. The Rama quotes the Ra'avad but agrees with the S\"A's pssak."
+      }
+    },
+    {
+      "id": 106,
+      "type": "mc",
+      "text": "According to the Chazon Ish, tea leaves placed in hot water for flavor and then removed are:",
+      "options": [
+        { "label": "A", "text": "Obligated in tu\"m with a bracha." },
+        { "label": "B", "text": "Obligated in tu\"m without a bracha." },
+        { "label": "C", "text": "Exempt from tu\"m – they are like black pepper which is added only for flavor and not consumed." },
+        { "label": "D", "text": "Subject to a dispute and one should be machmir." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-I. Spices",
+        "page": "TU'M p.20",
+        "snippet": "Tea leaves added just for flavor and then removed are similar to black pepper and not obligated in tu\"m. However, coffee, where the intention is to consume the beans, is obligated."
+      }
+    },
+    {
+      "id": 107,
+      "type": "ms",
+      "text": "The Beis Midrash L'Halacha B'Hisyashvus differentiates between three categories of spices for tu\"m. Which of the following pairings are correct? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "Spices for flavor only (e.g., tea, black pepper, bay leaves) – exempt from tu\"m." },
+        { "label": "B", "text": "Foods consumed as food but also used as spices (e.g., onions, garlic, parsley) – mafrish with a bracha." },
+        { "label": "C", "text": "Spices added for flavor but also intended to be consumed (e.g., coffee, ginger, oregano) – mafrish without a bracha." },
+        { "label": "D", "text": "All spices are exempt from tu\"m." }
+      ],
+      "correct": ["A", "B", "C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-I. Spices",
+        "page": "TU'M p.20",
+        "snippet": "Three categories: 1) Flavor only (tea, pepper, bay leaves) = exempt. 2) Consumed as food and as spice (onions, garlic, parsley) = mafrish with bracha. 3) For spice but also consumed (coffee, ginger, oregano) = mafrish without bracha."
+      }
+    },
+    {
+      "id": 108,
+      "type": "mc",
+      "text": "A vegetable grown in a pot with a hole (perforated pot) on an open balcony is:",
+      "options": [
+        { "label": "A", "text": "Completely exempt from tu\"m." },
+        { "label": "B", "text": "Biblically obligated in tu\"m." },
+        { "label": "C", "text": "Only rabbinically obligated." },
+        { "label": "D", "text": "Obligated only if the pot is on the ground floor." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-J. Potted Plants",
+        "page": "TU'M p.21",
+        "snippet": "Tosfos in Gittin (7b) writes that even if the pot is suspended in the air, if it has a hole, it is biblically required in tu\"m as long as nothing is between the pot and the floor."
+      }
+    },
+    {
+      "id": 109,
+      "type": "mc",
+      "text": "What is the status of produce grown indoors (not in a greenhouse)?",
+      "options": [
+        { "label": "A", "text": "Biblically obligated in tu\"m." },
+        { "label": "B", "text": "Best to be mafrish without a bracha – the Rambam says rabbinic, but the Ra'avad exempts completely." },
+        { "label": "C", "text": "Completely exempt according to all opinions." },
+        { "label": "D", "text": "Obligated with a bracha like outdoor produce." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-J. Potted Plants",
+        "page": "TU'M p.21",
+        "snippet": "The Rambam exempts produce grown inside biblically (since the passuk says 'hayotzei hasadeh' – out in the field), but Chazal still required hafrasha. The Ra'avad exempts completely. Poskim say mafrish without a bracha."
+      }
+    },
+    {
+      "id": 110,
+      "type": "mc",
+      "text": "Rav Chaim Kanievsky passkens that plants grown in greenhouses are:",
+      "options": [
+        { "label": "A", "text": "Exempt from tu\"m since they are indoors." },
+        { "label": "B", "text": "Only rabbinically obligated." },
+        { "label": "C", "text": "Biblically obligated – since the greenhouse is the normal and best way to grow plants, it is considered 'the field.'" },
+        { "label": "D", "text": "Subject to a safek and should be mafrish without a bracha." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-J. Potted Plants",
+        "page": "TU'M p.21",
+        "snippet": "Rav Chaim Kanievsky (Derech Emunah) passkens that greenhouses are biblically obligated in hafrashas tu\"m since the cover helps the produce grow and it is the normal way to grow, so it's considered 'the field.'"
+      }
+    },
+    {
+      "id": 111,
+      "type": "tf",
+      "text": "True (A) or False (B): Mushrooms are exempt from hafrashas tu\"m because they do not absorb their nutrients from the ground.",
+      "options": [
+        { "label": "A", "text": "True" },
+        { "label": "B", "text": "False" }
+      ],
+      "correct": ["A"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-J. Potted Plants",
+        "page": "TU'M p.21",
+        "snippet": "The Shevet HaLevi passkens that mushrooms are exempt from hafrashas tu\"m since they grow from the air and do not absorb from the ground, unlike grain, oil and wine."
+      }
+    },
+    {
+      "id": 112,
+      "type": "ms",
+      "text": "Which of the following are among the six criteria of kevi'us l'ma'aser (acts that indicate produce is ready for formal consumption and trigger the obligation to be mafrish)? (Click as many as apply)",
+      "options": [
+        { "label": "A", "text": "The produce enters your courtyard." },
+        { "label": "B", "text": "You sell part of the produce." },
+        { "label": "C", "text": "You cook or salt the produce." },
+        { "label": "D", "text": "You recite a bracha on the produce." }
+      ],
+      "correct": ["A", "B", "C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-K. Stage of Requirement",
+        "page": "TU'M p.22",
+        "snippet": "The six criteria of kevi'us l'ma'aser are: 1) Produce entering courtyard. 2) Selling part. 3) Cooking. 4) Salting. 5) Being mafrish even just terumah. 6) When Shabbos arrives."
+      }
+    },
+    {
+      "id": 113,
+      "type": "mc",
+      "text": "The obligation to be mafrish and the prohibition to eat even b'derech arai go into effect when two criteria are both met. What are they?",
+      "options": [
+        { "label": "A", "text": "The fruit must be ripe AND it must be Shabbos." },
+        { "label": "B", "text": "Gemar melacha (processing complete) AND one of the six criteria of kevi'us l'ma'aser." },
+        { "label": "C", "text": "The fruit must be picked AND brought to Yerushalayim." },
+        { "label": "D", "text": "The fruit must be sold AND a bracha must be recited." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-K. Stage of Requirement",
+        "page": "TU'M p.22",
+        "snippet": "The obligation to be mafrish and the prohibition to eat even b'derech arai go into effect when two criteria are met: 1) gemar melacha – processing is complete, and 2) kevi'us l'ma'aser – one of the 6 criteria."
+      }
+    },
+    {
+      "id": 114,
+      "type": "mc",
+      "text": "The Chazon Ish explains that whether eating is considered arai (non-permanent) or keva (permanent) is determined by:",
+      "options": [
+        { "label": "A", "text": "The amount of food eaten." },
+        { "label": "B", "text": "Your intention – if you designated the food for a meal, it is keva; if eating on the go, even a lot, it is arai." },
+        { "label": "C", "text": "Whether you are sitting or standing." },
+        { "label": "D", "text": "Whether you washed your hands before eating." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-K. Stage of Requirement",
+        "page": "TU'M p.22",
+        "snippet": "The Chazon Ish explains that arai and keva are not determined by the amount eaten but by intention. Designated for a meal = keva. Eating on the go, even a lot = arai."
+      }
+    },
+    {
+      "id": 115,
+      "type": "mc",
+      "text": "In your garden, you may eat fruit without being mafrish ONLY if:",
+      "options": [
+        { "label": "A", "text": "You eat fewer than 3 fruits." },
+        { "label": "B", "text": "You take one fruit at a time and only if the entire fruit can fit in your mouth in one shot (e.g., a grape or cherry)." },
+        { "label": "C", "text": "You are standing." },
+        { "label": "D", "text": "The fruit tree is less than 3 years old." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-K. Stage of Requirement",
+        "page": "TU'M p.22",
+        "snippet": "The kashrus HaMazon passkens that any fruit that can be eaten in one shot (grape, cherry, nut) may be eaten in the garden, but fruits that cannot (pomegranate, orange) may not be taken off the tree and eaten."
+      }
+    },
+    {
+      "id": 116,
+      "type": "mc",
+      "text": "At a \"pick your own farm\" in Israel, the simplest way to eat freely while picking (according to all opinions including the Chazon Ish) is:",
+      "options": [
+        { "label": "A", "text": "Be mafrish before picking." },
+        { "label": "B", "text": "Pick only one small fruit at a time and eat it." },
+        { "label": "C", "text": "Pay at the end so there is no kevi'us l'ma'aser from purchasing." },
+        { "label": "D", "text": "Both B and C work according to all opinions." }
+      ],
+      "correct": ["D"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-L. Pick Your Own Farm Produce",
+        "page": "TU'M p.23",
+        "snippet": "Two solutions work even according to the Chazon Ish: 1) Only pick one fruit at a time if it's small. 2) Pay at the end so there is no kevi'us l'ma'aser."
+      }
+    },
+    {
+      "id": 117,
+      "type": "mc",
+      "text": "The Rambam differentiates between purchasing a tree for its fruit and purchasing a specific number of fruits. When you buy specific fruits and pay upfront:",
+      "options": [
+        { "label": "A", "text": "You may eat freely because you own the fruit." },
+        { "label": "B", "text": "The moment you pick the fruits, the sale goes into effect (kevi'us l'ma'aser) and picking more than one is gemar melacha – so you must be mafrish." },
+        { "label": "C", "text": "You are exempt since the field owner already separated tu\"m." },
+        { "label": "D", "text": "You may eat b'derech arai without limit." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-L. Pick Your Own Farm Produce",
+        "page": "TU'M p.23",
+        "snippet": "Rav Achitov explains: when you buy specific fruits and pay upfront, the moment you pick them is when the sale goes into effect (kevi'us l'ma'aser), and planning to eat them now is gemar melacha."
+      }
+    },
+    {
+      "id": 118,
+      "type": "mc",
+      "text": "The S\"A passkens that hefker fruit is:",
+      "options": [
+        { "label": "A", "text": "Obligated in tu\"m just like owned produce." },
+        { "label": "B", "text": "Exempt from tu\"m." },
+        { "label": "C", "text": "Only obligated if collected in large amounts." },
+        { "label": "D", "text": "Exempt only in chutz la'aretz." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-M. Miscellaneous Halachos",
+        "page": "TU'M p.24",
+        "snippet": "The S\"A (siman 331:16) passkens that hefker fruit is exempt from tu\"m. If you live in a city with fruit trees and the municipality allows you to take the fruit, you do not need to be mafrish."
+      }
+    },
+    {
+      "id": 119,
+      "type": "mc",
+      "text": "Fruits grown in Eretz Yisrael and shipped to chutz la'aretz are:",
+      "options": [
+        { "label": "A", "text": "Exempt from tu\"m once they leave Eretz Yisrael." },
+        { "label": "B", "text": "Still obligated in hafrashas tu\"m." },
+        { "label": "C", "text": "Only obligated if eaten by someone living in Eretz Yisrael." },
+        { "label": "D", "text": "Only obligated for grain, wine, and oil." }
+      ],
+      "correct": ["B"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-M. Miscellaneous Halachos",
+        "page": "TU'M p.25",
+        "snippet": "Fruits grown in EY and shipped to chutz la'aretz are obligated in tu\"m. This is common with Israeli oranges sent to England and cherry tomatoes shipped to the US."
+      }
+    },
+    {
+      "id": 120,
+      "type": "mc",
+      "text": "The Shemiras Shabbos Kehilchasa passkens that if you are unable to separate tu\"m before Shabbos, you may:",
+      "options": [
+        { "label": "A", "text": "Be mafrish on Shabbos without any preparation." },
+        { "label": "B", "text": "Not eat the produce until after Shabbos." },
+        { "label": "C", "text": "Say the nussach of the hafrasha on erev Shabbos in the future tense, then on Shabbos recite a bracha and say the regular nussach." },
+        { "label": "D", "text": "Ask a non-Jew to be mafrish for you." }
+      ],
+      "correct": ["C"],
+      "points": 1.3,
+      "sourceRef": {
+        "section": "TUM-M. Miscellaneous Halachos",
+        "page": "TU'M p.25",
+        "snippet": "The SSK passkens that you may say the nussach on erev Shabbos in the future tense, then on Shabbos recite a bracha and say the regular nussach. Since it's a derabanan, Chazal were lenient when the nussach begins on erev Shabbos."
+      }
+    },
+    {
+      "id": 121,
+      "type": "essay",
+      "text": "Describe the four types of terumos and ma'asros. For each one, explain: who it is given to, the amount required, which years it is given, and any notable halachos.",
+      "points": 7.5,
+      "modelAnswer": "1) Terumah Gedolah: Given to the kohen. Biblically, any amount suffices; Chazal set gradations: generous = 1/40, average = 1/50, stingy = 1/60. Today we separate the smallest amount since it's not actually given to a kohen. Given every year except shemittah. Notable: Only tahor kohanim may eat it. The Yisrael chooses which kohen receives it. 2) Ma'aser Rishon: Given to the levi. 10% of remaining produce after terumah gedolah. Given every year except shemittah. Notable: Has no kedusha and can be eaten by anyone. Ezra fined levi'im and gave it to kohanim when they didn't return. Today, Chazon Ish holds we don't give to levi'im since we can't verify lineage; Teshuvos V'Hanhagos argues we should. 3) Terumas Ma'aser: The levi gives 10% of his ma'aser rishon (=1% of original produce) to a kohen. Given every year except shemittah. Notable: Has kedusha like terumah – only eaten by tahor kohanim. The Yisrael may separate it himself if he wants. 4) Ma'aser Sheini/Ani: On years 1,2,4,5 – Ma'aser Sheini: 10% of remaining produce set aside and eaten in Yerushalayim. Can be redeemed onto a coin (add chomesh if redeeming your own). On years 3,6 – Ma'aser Ani: 10% given to poor people. Has no kedusha. Must actually be given to an ani; if not separated, food remains tevel.",
+      "sourceRef": {
+        "section": "TUM-B. Hafrashas Terumos and Ma'asros",
+        "page": "TU'M pp.2-6",
+        "snippet": "Four gifts: Terumah Gedolah (any amount → kohen), Ma'aser Rishon (10% → levi), Terumas Ma'aser (1% → kohen), Ma'aser Sheini (years 1,2,4,5 → eaten in Yerushalayim) or Ma'aser Ani (years 3,6 → poor)."
+      }
+    },
+    {
+      "id": 122,
+      "type": "essay",
+      "text": "Explain the concept of perutah chamurah. Why is it needed, what makes a coin a perutah chamurah, what is the dispute between Rav Kook and RSZA, and what practical limitation does the Chazon Ish add?",
+      "points": 7.5,
+      "modelAnswer": "A perutah chamurah is needed when your ma'aser sheini produce is worth less than a perutah – in which case it cannot be redeemed on an ordinary coin. The Gemara (Bava Metzia 53a) teaches that if you already have a coin that was previously used to redeem ma'aser sheini worth at least a perutah ('ma'os rishonos'), you may use the excess value on that coin to redeem ma'aser sheini worth less than a perutah. Dispute: Rav Kook holds that today, since we redeem large quantities on exactly one perutah, there is no excess. Therefore, the first time you use a coin, you must redeem the actual monetary value of the ma'aser sheini (not just a perutah) to create real excess. RSZA disagrees – he argues that even today there is minor excess from rounding up the perutah value and exchange rate, so any coin previously used for redemption works. Chazon Ish's limitation: The perutah chamurah may only be used to redeem produce of equal or lesser halachic requirement than the produce originally redeemed on it. E.g., a coin used for cucumbers (rabbinic obligation) cannot redeem wine (biblical obligation) worth less than a perutah. A 'super perutah chamurah' – created by redeeming grain, wine or oil grown in the center of EY – may be used for any produce.",
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M pp.10-12",
+        "snippet": "Perutah chamurah = coin previously used for ma'aser sheini worth ≥ perutah. Rav Kook: must redeem actual value first. RSZA: rounding creates excess. Chazon Ish: must match halachic level of obligation."
+      }
+    },
+    {
+      "id": 123,
+      "type": "essay",
+      "text": "Compare and contrast the Torah Ve Ha'aretz Institute and the Beis Midrash L'Halacha B'Hisyashvus regarding hafrashas tu\"m. Discuss at least five differences between the two organizations.",
+      "points": 7.5,
+      "modelAnswer": "1) Perutah for redemption: Torah Ve Ha'aretz redeems on a perutah plus a chomesh (quarter perutah); Beis Midrash redeems on a single perutah. 2) Coin ownership: Torah Ve Ha'aretz gives each member their own coin; Beis Midrash uses Rav Reichenberg's coin – members use his coin, so it's as if someone else is redeeming for you. 3) Chomesh on fruit: Torah Ve Ha'aretz members own their coin, so they must add chomesh to the fruit value; Beis Midrash members don't add chomesh since it's as if someone else redeems. However, this is dangerous – if you accidentally use the regular nussach that includes 'v'chumsho,' the redemption is invalid according to RSZA. 4) Perutah chamurah creation: Torah Ve Ha'aretz is choshesh for Rav Kook and transfers actual value of produce to the coin; Beis Midrash transfers one perutah. 5) Availability after biur: Torah Ve Ha'aretz gets a perutah chamurah around Shavuos (when wheat is harvested); Beis Midrash has one ready on isru chag by crushing grapes for wine on year 2 and sifting out pits/peels after Pesach. 6) Ma'aser ani: Torah Ve Ha'aretz uses the concept of mekiri kehunah – a designated gabbay tzedakah automatically acquires the ma'aser ani; Beis Midrash requires someone to lift the produce on behalf of the ani. 7) Ma'aser rishon: Torah Ve Ha'aretz has a designated levi through mekiri (included in membership); Beis Midrash requires finding a levi yourself or recording the debt.",
+      "sourceRef": {
+        "section": "TUM-D. Hafrashas Terumos and Ma'asros Today — The Hafrasha",
+        "page": "TU'M pp.9-14",
+        "snippet": "Seven differences: perutah amount, coin ownership, chomesh requirement, perutah chamurah method, availability post-biur, ma'aser ani process, ma'aser rishon process."
+      }
+    },
+    {
+      "id": 124,
+      "type": "essay",
+      "text": "Explain the halachic framework for when produce becomes obligated in hafrashas tu\"m. Include: gemar melacha, kevi'us l'ma'aser, the difference between eating in a field vs. garden vs. home, and practical applications for eating fruit in your garden.",
+      "points": 7.5,
+      "modelAnswer": "The obligation to be mafrish and the prohibition to eat even b'derech arai go into effect when two conditions are met: 1) Gemar melacha – the produce completed processing and is ready to be sold. Each produce has its own standard – today, placing produce in boxes for sale is generally considered gemar melacha. 2) Kevi'us l'ma'aser – one of six criteria: produce enters your courtyard, selling part, cooking, salting, being mafrish terumah, or Shabbos arrives. In the field: Before gemar melacha, you may eat freely b'derech arai. Even after gemar melacha, if planning to bring home (not sell), you may eat arai until a kevi'us criterion is met. In the garden: The garden is your courtyard (kevi'us), and picking more than one fruit is gemar melacha – both conditions are met simultaneously. Solution: the Rambam teaches that taking one fruit at a time is not gemar melacha. The Chazon Ish and poskim passkin you may eat one fruit at a time if the entire fruit fits in your mouth in one shot (grape, cherry, nut). But oranges or pomegranates cannot be eaten this way; you'd need to peel them while still attached. At home: Once produce enters the home with gemar melacha, you may not eat even arai. If there was no gemar melacha (e.g., zucchini brought home with yellow membrane), you may still eat arai.",
+      "sourceRef": {
+        "section": "TUM-K. Stage of Requirement",
+        "page": "TU'M pp.22-23",
+        "snippet": "Two criteria trigger obligation: gemar melacha + kevi'us l'ma'aser. Field = arai OK before gemar melacha. Garden = one fruit at a time only. Home = forbidden once both criteria met."
+      }
+    },
+    {
+      "id": 125,
+      "type": "essay",
+      "text": "Explain how to calculate the year of ma'aser for different types of produce: vegetables, grain/legumes, fruit trees, esrog, and citrus. Include the dispute between the Chazon Ish and RSZA regarding citrus fruits.",
+      "points": 7.5,
+      "modelAnswer": "1) Vegetables: Year counted from Rosh Hashana. Determining factor = when picked (lekitah). If picked before RH of year 3 → year 2 (ma'aser sheini). If picked after RH → year 3 (ma'aser ani). 2) Grain/Legumes (wheat, soy): Year counted from Rosh Hashana. Determining factor = when reached 1/3 growth (hava'as shlish). Picking time irrelevant. If grew 1/3 before RH of year 3 → year 2. 3) Fruit Trees: Year counted from Tu B'Shvat. Determining factor = when reached 1/3 growth (chanatah). Picking time irrelevant. A pomegranate that grew 1/3 after Tu B'Shvat of year 2, even if picked after RH of year 3, takes ma'aser sheini. 4) Esrog: Combination – year counted from Tu B'Shvat (like tree) but determining factor = when picked (like vegetable). 5) Citrus (oranges, lemons): The Chazon Ish passkens they resemble esrogim in many ways and we are machmir – give them stringencies of both trees and vegetables. If growing and picking span different years (common with citrus), separate both ma'aser sheini AND ma'aser ani. RSZA disagrees: citrus are calculated like other fruit trees (by 1/3 growth from Tu B'Shvat). He proves from the Rambam who says 'only' an esrog follows picking; since lemons were known in the Rambam's time, the word 'only' excludes them.",
+      "sourceRef": {
+        "section": "TUM-E. Calculating the Years of Ma'aser",
+        "page": "TU'M pp.14-16",
+        "snippet": "Vegetables: RH + picking. Grain: RH + 1/3 growth. Trees: Tu B'Shvat + 1/3 growth. Esrog: Tu B'Shvat + picking. Citrus: Chazon Ish = stringencies of both; RSZA = like regular trees."
       }
     }
   ]
