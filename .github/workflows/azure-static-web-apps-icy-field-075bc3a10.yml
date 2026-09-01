@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   build_and_deploy_job:
@@ -21,7 +20,6 @@ jobs:
     name: Build and Deploy Job
     permissions:
       contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
