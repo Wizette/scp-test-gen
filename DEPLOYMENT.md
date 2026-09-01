@@ -5,7 +5,10 @@ This repository publishes the static site in `app/` with the workflow
 
 The production Azure Static Web App is `scp-test-gen` in resource group
 `NetworkWatcherRG`, region `East US 2` (`eastus2`), on the `Free` SKU. Its
-default hostname is `mango-glacier-0ae0aaa0f.3.azurestaticapps.net`.
+default hostname is `mango-glacier-0ae0aaa0f.3.azurestaticapps.net`. The resource is
+deliberately **not linked to the GitHub repository** (`provider=None`,
+`repositoryUrl=null`); deployment is performed by the repository workflow using
+the SWA CLI and deployment token.
 
 ## Prerequisites and one-time setup
 
@@ -22,13 +25,20 @@ default hostname is `mango-glacier-0ae0aaa0f.3.azurestaticapps.net`.
 
   `AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_FIELD_075BC3A10`
 
-  Do not put the token in YAML, source files, issues, or logs. The upload and
-  pull-request-close jobs both reference this secret.
+  Do not put the token in YAML, source files, issues, documentation, or logs.
+  Pipe it directly to GitHub and never print or store the value; for example:
 
-The workflow is an explicit static upload: `app_location` is `app`,
-`skip_app_build` is `true`, `output_location` is empty (the app directory
-itself is the published output), and `api_location` is empty (there is no API).
-No package installation or build command runs in the deployment workflow.
+  `az staticwebapp secrets list --name scp-test-gen --resource-group NetworkWatcherRG -o tsv | tr -d '\r\n' | gh secret set AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_FIELD_075BC3A10 --repo Wizette/scp-test-gen`
+
+  Stripping `\r` matters when the command is run on Windows. The production
+  upload job references this secret; the pull-request-close job uses the Azure
+  action for preview cleanup.
+
+The workflow's production job runs `npx -y @azure/static-web-apps-cli@latest
+ deploy ./app --env production`, with `SWA_CLI_DEPLOYMENT_TOKEN` populated from
+the repository secret. No package installation or build command other than the
+SWA CLI invocation runs in the deployment workflow. The close-pull-request job
+still uses `Azure/static-web-apps-deploy@v1.0.0` to remove a preview.
 
 ## Local validation and URLs
 
@@ -105,6 +115,14 @@ workflow run after selecting the known-good revision.
 - **Missing token/401:** verify the repository secret name matches exactly,
   that its value is the SWA deployment token for this resource, and that
   Actions can read repository secrets (fork PRs do not receive secrets).
+- **OIDC/deployment-action authentication errors:** production intentionally
+  does not use `Azure/static-web-apps-deploy@v1`. That action now mandates GitHub
+  OIDC (`id-token: write`); without the permission it fails with `Unable to get
+  ACTIONS_ID_TOKEN_REQUEST_URL env variable`, and with OIDC against this
+  deliberately unlinked SWA it fails with `No matching Static Web App was found
+  or the api key was invalid`. The alternative is linking the SWA to the GitHub
+  repository, but that is intentionally avoided; the production job therefore
+  uses the SWA CLI with `SWA_CLI_DEPLOYMENT_TOKEN`.
 - **404 or missing JSON:** confirm the workflow's `app_location: app`, empty
   `output_location`, `skip_app_build: true`, and that `app/tests/*.json` is
   committed. Test through HTTP locally rather than opening `index.html`
@@ -118,6 +136,6 @@ workflow run after selecting the known-good revision.
   GitHub Actions run and Azure deployment history, then redeploy by reverting
   or rerunning the appropriate workflow.
 
-The Azure Static Web App is deployed at the live hostname documented above.
+The Azure Static Web App is live at the hostname and URLs documented above.
 The deployment token is stored only in the GitHub Actions secret named above;
 it is not stored in this repository or in the workflow.
