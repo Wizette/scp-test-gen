@@ -3,6 +3,10 @@
 This repository publishes the static site in `app/` with the workflow
 `.github/workflows/azure-static-web-apps-icy-field-075bc3a10.yml`.
 
+The production Azure Static Web App is `scp-test-gen` in resource group
+`NetworkWatcherRG`, region `East US 2` (`eastus2`), on the `Free` SKU. Its
+default hostname is `mango-glacier-0ae0aaa0f.3.azurestaticapps.net`.
+
 ## Prerequisites and one-time setup
 
 - A GitHub repository with Actions enabled and permission to add repository
@@ -48,9 +52,16 @@ Then visit:
 - `http://localhost:8080/stats.html?test=z17-test` (or `z18-test`) to select Z17 or Hilchot Tzitzit
   the stats bank
 
-The equivalent deployed URLs use the same paths and query strings, for
-Hilchot Tzitzit examples: example `https://<site>.azurestaticapps.net/?test=z18-test` and
-`https://<site>.azurestaticapps.net/stats.html?test=z18-test`.
+The live deployed URLs are:
+
+- `https://mango-glacier-0ae0aaa0f.3.azurestaticapps.net/`
+- `https://mango-glacier-0ae0aaa0f.3.azurestaticapps.net/?test=z17-test`
+- `https://mango-glacier-0ae0aaa0f.3.azurestaticapps.net/?test=z18-test`
+- `https://mango-glacier-0ae0aaa0f.3.azurestaticapps.net/stats.html?test=z18-test`
+
+The GitHub Actions deployment secret is
+`AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_FIELD_075BC3A10`. The workflow file was
+not renamed because it already references this exact secret name.
 
 ## Deployment behavior
 
@@ -107,5 +118,6 @@ workflow run after selecting the known-good revision.
   GitHub Actions run and Azure deployment history, then redeploy by reverting
   or rerunning the appropriate workflow.
 
-No live Azure deployment was performed for this change; this task only updates
-the workflow and documentation, and deployment credentials were not used.
+The Azure Static Web App is deployed at the live hostname documented above.
+The deployment token is stored only in the GitHub Actions secret named above;
+it is not stored in this repository or in the workflow.
