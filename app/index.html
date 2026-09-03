@@ -773,6 +773,7 @@ a:hover { text-decoration: underline; }
 let testData = null;
 let answers = {};        // { questionId: [selectedLabels] } or { questionId: "essay text" }
 let essayGrades = {};
+let attemptSeed = 0;     // drives both subset selection and option order for the current attempt
 let submissionStatus = 'draft';
 let currentCompletionId = null;
 let bookmarks = new Set();
@@ -903,7 +904,9 @@ function populateStartScreen() {
 
 /* ── Build Randomized Test Subset ────────────────── */
 function stableHash(value) { let h=2166136261; for (const c of String(value)) { h^=c.charCodeAt(0); h=Math.imul(h,16777619); } return h>>>0; }
-function seededShuffle(items, seed) { const a=items.slice(); let x=seed>>>0; for(let i=a.length-1;i>0;i--){ x=(Math.imul(x,1664525)+1013904223)>>>0; const j=x%(i+1); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function seededRandom(seed) { let a=(seed>>>0)||0x9e3779b9; return function(){ a=(a+0x6D2B79F5)>>>0; let t=Math.imul(a^(a>>>15),1|a); t=(t+Math.imul(t^(t>>>7),61|t))^t; return ((t^(t>>>14))>>>0)/4294967296; }; }
+/* mulberry32, not an LCG: the low bits of an LCG reach only 12 of the 24 orderings of a 4-option question. */
+function seededShuffle(items, seed) { const a=items.slice(), rnd=seededRandom(seed); for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function sourceSection(q) { const r=q.sourceRef; if (r && typeof r==='object') return r.section || r.name || ''; return typeof r==='string' ? (r.split(/[.:#]/).pop() || '') : ''; }
 function quotaFor(cfg, key, fallback) { const x=(cfg.objectiveQuotas||cfg.quotas||{})[key]; return Number.isFinite(+x) ? +x : fallback; }
 function sectionKey(q, cfg, quotaKeys) {
@@ -923,6 +926,22 @@ function sectionKey(q, cfg, quotaKeys) {
 }
 function isEssay(q) {
   return String(q && q.type || '').toLowerCase() === 'essay';
+}
+/* Reorders options and rewrites labels to stay sequential (A, B, C…), remapping q.correct to match.
+   true/false keeps its authored order so "True" stays first; essays have no options. */
+function shuffleQuestionOptions(q, seed) {
+  const type = String(q && q.type || '').toLowerCase();
+  if ((type !== 'mc' && type !== 'ms') || !Array.isArray(q.options) || q.options.length < 2) return q;
+  const source = q.options.map((opt, i) => ({ ...opt, sourceLabel: String(opt.label ?? String.fromCharCode(65 + i)) }));
+  const ordered = seededShuffle(source, (seed >>> 0) ^ stableHash('options:' + q.id));
+  const labelMap = {};
+  const options = ordered.map((opt, i) => {
+    const label = String.fromCharCode(65 + i);
+    labelMap[opt.sourceLabel] = label;
+    return { ...opt, label };
+  });
+  const correct = (q.correct || []).map(l => labelMap[String(l)] || String(l)).sort();
+  return { ...q, options, correct, optionLabelMap: labelMap };
 }
 function buildGenericSubset(bank, cfg, seed) {
   const config = cfg || {};
@@ -946,24 +965,40 @@ function buildGenericSubset(bank, cfg, seed) {
   for (const q of essays.slice(0, essayCount)) { if (used.has(q.id)) throw new Error('Duplicate question ID selected: '+q.id); selected.push(q); used.add(q.id); }
   const expected = Object.values(quotas).reduce((sum, value) => sum + Number(value || 0), 0) + essayCount;
   if (selected.length !== expected || used.size !== selected.length) throw new Error('Invalid generated subset');
-  return selected;
+  return selected.map(q => shuffleQuestionOptions(q, baseSeed));
 }
 function canonicalTestName() { return TEST_REGISTRY[selectedTestName].canonical; }
 function bankVersion() { return String(testData.bankVersion||testData.version||'1'); }
 function storagePrefix() { return 'scp:'+canonicalTestName()+':'+bankVersion(); }
 function statsKey(kind) { return kind+':'+canonicalTestName()+':'+bankVersion(); }
 function readSavedState() { try { const modern=JSON.parse(localStorage.getItem(storagePrefix()+':state')||'null'); if(modern) return modern; if(canonicalTestName()==='Z17') { const old=JSON.parse(localStorage.getItem('scp_state')||'null'); if(old) return old; } } catch(e) {} return null; }
-function saveState() { try { localStorage.setItem(storagePrefix()+':state',JSON.stringify({answers,essayGrades,submissionStatus,currentCompletionId,results:window.__results||null})); } catch(e) {} }
-/* Only an unfinished attempt resumes; a submitted one must not pre-fill the next run. */
-function restoreState() { const x=readSavedState(); if(!x) return; if(x.submissionStatus&&x.submissionStatus!=='draft') return; if(x.answers&&typeof x.answers==='object') answers=x.answers; if(x.essayGrades&&typeof x.essayGrades==='object') essayGrades=x.essayGrades; if(x.submissionStatus) submissionStatus=x.submissionStatus; if(x.currentCompletionId) currentCompletionId=x.currentCompletionId; }
+function saveState() { try { localStorage.setItem(storagePrefix()+':state',JSON.stringify({seed:attemptSeed,answers,essayGrades,submissionStatus,currentCompletionId,results:window.__results||null})); } catch(e) {} }
+/* Only an unfinished attempt resumes; a submitted one must not pre-fill the next run.
+   The seed guard stops answers saved under one question/option ordering from being
+   replayed against a different one. */
+function restoreState() { const x=readSavedState(); if(!x) return; if(x.submissionStatus&&x.submissionStatus!=='draft') return; if(testData.testConfig&&Number(x.seed)!==Number(attemptSeed)) return; if(x.answers&&typeof x.answers==='object') answers=x.answers; if(x.essayGrades&&typeof x.essayGrades==='object') essayGrades=x.essayGrades; if(x.submissionStatus) submissionStatus=x.submissionStatus; if(x.currentCompletionId) currentCompletionId=x.currentCompletionId; }
+function attemptKey() { return storagePrefix()+':attempt'; }
+function newAttemptSeed() {
+  try { const buf=new Uint32Array(1); crypto.getRandomValues(buf); if(buf[0]) return buf[0]>>>0; } catch(e) {}
+  return (stableHash(String(Date.now())+':'+Math.random())^(Date.now()>>>0))>>>0;
+}
+function readAttempt() { try { const a=JSON.parse(localStorage.getItem(attemptKey())||'null'); return a&&Number.isFinite(Number(a.seed))?a:null; } catch(e) { return null; } }
+function writeAttempt(a) { try { localStorage.setItem(attemptKey(),JSON.stringify(a)); } catch(e) {} }
+function clearAttempt() { try { localStorage.removeItem(attemptKey()); } catch(e) {} }
+/* An unfinished attempt keeps its seed across reloads; every fresh attempt draws a new one. */
+function resolveAttemptSeed() {
+  const open=readAttempt();
+  if (open && open.status==='draft') return Number(open.seed)>>>0;
+  const seed=newAttemptSeed();
+  writeAttempt({ seed:seed, status:'draft', startedAt:new Date().toISOString() });
+  return seed;
+}
 function buildTestSubset() {
   if (!testData.testConfig) return;
-  const cfg=testData.testConfig;
   testData._pool=testData.questions.slice();
-  const seedKey=storagePrefix()+':subset';
-  let seed;
-  try { seed=localStorage.getItem(seedKey); if(!seed){ seed=String(stableHash(selectedTestName+':'+(testData.bankVersion||testData.version||'1'))); localStorage.setItem(seedKey,seed); } } catch(e) { seed=selectedTestName; }
-  testData.questions=buildGenericSubset(testData._pool,cfg,seed);
+  try { localStorage.removeItem(storagePrefix()+':subset'); } catch(e) {} // retired fixed-seed key
+  attemptSeed=resolveAttemptSeed();
+  testData.questions=buildGenericSubset(testData._pool,testData.testConfig,attemptSeed);
 }
 
 /* ── Start, timer, grid, and navigation ─────────── */
@@ -1321,6 +1356,7 @@ function finishTest() {
   });
   currentCompletionId = String(Date.now())+'-'+Math.random().toString(36).slice(2);
   submissionStatus = testData.questions.some(isEssay) ? 'provisional' : 'final';
+  writeAttempt({ seed: attemptSeed, status: 'complete' }); // the next start must draw a new subset
   trackEvent('test_complete', {
     completionId: currentCompletionId,
     status: submissionStatus,
@@ -1478,6 +1514,7 @@ function updateTotalScore() {
 /* ── Retake ──────────────────────────────────────── */
 function retakeTest() {
   if (testData._pool) testData.questions = testData._pool;
+  clearAttempt();
   resetSessionData();
   saveState();
   gridVisible = false;
