@@ -79,7 +79,8 @@
       },
       "text": "On what basis does Rav Moshe Feinstein explain the widespread practice of wearing tzitzis every single day?",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "On what basis does Rav Moshe Feinstein explain the widespread practice of wearing tzitzis every single day?"
+      "prompt": "On what basis does Rav Moshe Feinstein explain the widespread practice of wearing tzitzis every single day?",
+      "modelAnswer": "Rav Moshe explains that the widespread practice is not merely a custom but a public commitment that Klal Yisrael took upon itself. When the community keeps that practice, it is also fulfilling the biblical mitzvah itself."
     },
     {
       "id": "Z18-S01-MC-003",
@@ -116,7 +117,8 @@
       },
       "text": "What reason does the Rambam give for limiting the obligation of tzitzis to the daytime?",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "What reason does the Rambam give for limiting the obligation of tzitzis to the daytime?"
+      "prompt": "What reason does the Rambam give for limiting the obligation of tzitzis to the daytime?",
+      "modelAnswer": "The Rambam reads the verse as requiring that the tzitzis be visible, and visibility is possible only during daytime. That is why he limits the obligation to day, even though the mitzvah itself remains rooted in the Torah."
     },
     {
       "id": "Z18-S01-MC-004",
@@ -229,7 +231,8 @@
       },
       "text": "What does Rav Moshe rule about a tallis katan that was taken off at night?",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "What does Rav Moshe rule about a tallis katan that was taken off at night?"
+      "prompt": "What does Rav Moshe rule about a tallis katan that was taken off at night?",
+      "modelAnswer": "Rav Moshe permits putting a tallis katan back on at night if it had been removed earlier, but he says this is not required and not a hiddur. The point is that it is not treated as a new daytime obligation simply because it was temporarily removed."
     },
     {
       "id": "Z18-S01-TF-007",
@@ -258,7 +261,8 @@
       },
       "text": "A person is not required to purchase a four-cornered garment in order to fulfill the mitzvah of tzitzis.",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "A person is not required to purchase a four-cornered garment in order to fulfill the mitzvah of tzitzis."
+      "prompt": "A person is not required to purchase a four-cornered garment in order to fulfill the mitzvah of tzitzis.",
+      "modelAnswer": "True. Even according to those who treat tzitzis as a personal obligation, the Gemara does not require a person to buy a new four-cornered garment just to fulfill it. The mitzvah applies when one is already wearing such a garment."
     },
     {
       "id": "Z18-S01-TF-008",
@@ -285,9 +289,10 @@
         "page": "Z18S01 Summary",
         "snippet": "Nevertheless, unlike during the day, there is no added value to go out of one's way to wear such a garment. However, the Arizal quoted in the משנ״ב (כא-סקט״ו) writes that kabbalistically one should sleep with tzitzis at night."
       },
-      "text": "Rav Sternbach concludes that there is added value in going out of one's way to wear a daytime garment at night.",
+      "text": "The Arizal’s practice shows that there is added value in going out of one’s way to wear a daytime garment at night.",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "Rav Sternbach concludes that there is added value in going out of one's way to wear a daytime garment at night."
+      "prompt": "Rav Sternbach concludes that there is added value in going out of one's way to wear a daytime garment at night.",
+      "modelAnswer": "False. The halachic rule is that there is no added value in going out of one’s way to wear a daytime garment at night. The Arizal’s view is a kabbalistic stringency, not a practical daytime requirement."
     },
     {
       "id": "Z18-S01-TF-009",
@@ -316,7 +321,8 @@
       },
       "text": "The Magen Avraham concludes that the primary reason to sleep in tzitzis is rooted in Kabbalah.",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "The Magen Avraham concludes that the primary reason to sleep in tzitzis is rooted in Kabbalah."
+      "prompt": "The Magen Avraham concludes that the primary reason to sleep in tzitzis is rooted in Kabbalah.",
+      "modelAnswer": "True. The Magen Avraham explains the custom of sleeping in tzitzis as rooted primarily in kabbalah, not as a straightforward halachic requirement."
     },
     {
       "id": "Z18-S01-MS-010",
@@ -352,9 +358,10 @@
         "page": "Z18S01 Summary",
         "snippet": "The משנ״ב (סק״ב) clarifies that we are only lenient regarding the bracha, but if one wears a four-cornered daytime garment at night (which is exempt according to the רמב״ם) or if one wears nighttime clothing during the day (which is exempt according to the רא״ש), he is still obligated to put tzitzis on them."
       },
-      "text": "Which statements follow from the Rosh's position that the obligation depends on the type of garment?",
+      "text": "Which statements follow from the Rosh’s position that the obligation depends on the type of garment?",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "Which statements follow from the Rosh's position that the obligation depends on the type of garment?"
+      "prompt": "Which statements follow from the Rosh's position that the obligation depends on the type of garment?",
+      "modelAnswer": "The Rosh’s rule is that obligation follows the type of garment: daytime garments remain obligated after nightfall, and nighttime garments remain exempt even if worn by day. That means statements A and B are correct and C and D are not."
     },
     {
       "id": "Z18-S01-MS-011",
@@ -392,7 +399,8 @@
       },
       "text": "Which statements are correct about someone who follows the kabbalistic practice of sleeping in his tzitzis?",
       "sessionKey": "Z18S01 Summary",
-      "prompt": "Which statements are correct about someone who follows the kabbalistic practice of sleeping in his tzitzis?"
+      "prompt": "Which statements are correct about someone who follows the kabbalistic practice of sleeping in his tzitzis?",
+      "modelAnswer": "If someone sleeps in his tzitzis, he should not recite the morning bracha on that same pair because the obligation was already in effect overnight. The practice is to hear the bracha from someone else or switch to a different pair, and Sephardim follow that as well."
     },
     {
       "id": "Z18-S01-ESSAY-012",
@@ -636,9 +644,10 @@
         "page": "Z18S02 Summary",
         "snippet": "However, Rav Moshe in אגרו״מ (או״ח ח״ב-א) (10) passkins that garments made from synthetic material are exempt from tzitzis, similar to leather. He explains that even if the synthetic material is woven into thread, it is still similar to leather and exempt from tzitzis because the synthetic material can be made without it being woven to thread."
       },
-      "text": "Why does Rav Moshe exempt garments made from synthetic material?",
+      "text": "Why does Rav Moshe exempt garments made from synthetic material, even when the material is woven into a garment?",
       "sessionKey": "Z18S02 Summary",
-      "prompt": "Why does Rav Moshe exempt garments made from synthetic material?"
+      "prompt": "Why does Rav Moshe exempt garments made from synthetic material?",
+      "modelAnswer": "Rav Moshe rules that synthetic material is like leather: even if it is woven into thread, the fact that it can be produced without weaving makes it a nonstandard garment for tzitzis. That is why he exempts it and avoids a bracha."
     },
     {
       "id": "Z18-S02-TF-007",
@@ -667,7 +676,8 @@
       },
       "text": "Leather is exempt from tzitzis only on a biblical level, and a leather garment still carries a rabbinic obligation.",
       "sessionKey": "Z18S02 Summary",
-      "prompt": "Leather is exempt from tzitzis only on a biblical level, and a leather garment still carries a rabbinic obligation."
+      "prompt": "Leather is exempt from tzitzis only on a biblical level, and a leather garment still carries a rabbinic obligation.",
+      "modelAnswer": "False. Leather is exempt from tzitzis even on a rabbinic level, because it is not treated as a normal woven garment for this mitzvah."
     },
     {
       "id": "Z18-S02-TF-008",
@@ -696,7 +706,8 @@
       },
       "text": "Rav Shlomo Zalman Auerbach holds that woven synthetic fabric is obligated in tzitzis while a single unwoven sheet is not.",
       "sessionKey": "Z18S02 Summary",
-      "prompt": "Rav Shlomo Zalman Auerbach holds that woven synthetic fabric is obligated in tzitzis while a single unwoven sheet is not."
+      "prompt": "Rav Shlomo Zalman Auerbach holds that woven synthetic fabric is obligated in tzitzis while a single unwoven sheet is not.",
+      "modelAnswer": "True. Rav Shlomo Zalman Auerbach distinguishes between woven synthetic fabric and a single unwoven sheet: the former may carry the obligation, while the latter is treated like leather and is exempt."
     },
     {
       "id": "Z18-S02-TF-009",
@@ -725,7 +736,8 @@
       },
       "text": "A garment woven with wool in one direction and cotton in the other is biblically obligated in tzitzis according to the Mishnah Berurah.",
       "sessionKey": "Z18S02 Summary",
-      "prompt": "A garment woven with wool in one direction and cotton in the other is biblically obligated in tzitzis according to the Mishnah Berurah."
+      "prompt": "A garment woven with wool in one direction and cotton in the other is biblically obligated in tzitzis according to the Mishnah Berurah.",
+      "modelAnswer": "False. The Mishnah Berurah writes that if a garment is woven in one direction with wool and in the other with cotton, it is only rabbinically obligated, because weaving in one direction with wool is not considered a standard garment for the biblical mitzvah."
     },
     {
       "id": "Z18-S02-MS-010",
@@ -762,7 +774,7 @@
         "page": "Z18S02 Summary",
         "snippet": "Based on this Mishna, the להורות נתן (ח״ב-א) (16) passkins that any garment which is transparent because of its holes is not considered a begged and is exempt from tzitzis."
       },
-      "text": "Which reasons are offered for avoiding mesh tzitzis?",
+      "text": "Which reasons are offered for avoiding mesh tzitzis, and how do they relate to the halachic classification of the garment?",
       "sessionKey": "Z18S02 Summary",
       "prompt": "Which reasons are offered for avoiding mesh tzitzis?",
       "modelAnswer": "Three separate grounds converge against mesh: the polyester dispute, the unwoven sheet from which mesh is often punched, and the ruling that a garment see-through because of its holes is not a begged. Size is never the issue raised."
@@ -898,7 +910,8 @@
       },
       "text": "Which rule governs the material from which tzitzis strings may be made?",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "Which rule governs the material from which tzitzis strings may be made?"
+      "prompt": "Which rule governs the material from which tzitzis strings may be made?",
+      "modelAnswer": "The rule is that wool and linen strings may be placed on any four-cornered garment regardless of fabric. Other types of strings may be used only on garments made from the same material, so the matching rule still matters."
     },
     {
       "id": "Z18-S03-MC-003",
@@ -935,7 +948,8 @@
       },
       "text": "Why may wool strings not be placed on a linen garment nowadays?",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "Why may wool strings not be placed on a linen garment nowadays?"
+      "prompt": "Why may wool strings not be placed on a linen garment nowadays?",
+      "modelAnswer": "Nowadays, wool strings may not be placed on linen garments because the mitzvah is not fully fulfilled without techeiles. When the positive command is not being satisfied, the prohibition of shatnez is not pushed aside."
     },
     {
       "id": "Z18-S03-MC-004",
@@ -1040,7 +1054,8 @@
       },
       "text": "Rav Moshe held that one should not grow accustomed to removing tzitzis while exercising, although he acknowledged this is not a strict requirement.",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "Rav Moshe held that one should not grow accustomed to removing tzitzis while exercising, although he acknowledged this is not a strict requirement."
+      "prompt": "Rav Moshe held that one should not grow accustomed to removing tzitzis while exercising, although he acknowledged this is not a strict requirement.",
+      "modelAnswer": "True. Rav Moshe did not say it was required, but he urged against making a habit of removing tzitzis while exercising. He treated this as a practical caution, not as a strict halachic obligation."
     },
     {
       "id": "Z18-S03-TF-007",
@@ -1069,7 +1084,8 @@
       },
       "text": "The Mishnah Berurah rules that linen strings may never be used under any circumstances.",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "The Mishnah Berurah rules that linen strings may never be used under any circumstances."
+      "prompt": "The Mishnah Berurah rules that linen strings may never be used under any circumstances.",
+      "modelAnswer": "False. The Mishnah Berurah did not ban linen strings absolutely; it explained that they pose a practical shatnez risk because a wool that looks like silk could be mistaken for silk. The custom therefore became to avoid linen strings altogether."
     },
     {
       "id": "Z18-S03-TF-008",
@@ -1098,7 +1114,8 @@
       },
       "text": "Rav Herzog rejected the Murex trunculus because his own experiments produced purple rather than blue.",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "Rav Herzog rejected the Murex trunculus because his own experiments produced purple rather than blue."
+      "prompt": "Rav Herzog rejected the Murex trunculus because his own experiments produced purple rather than blue.",
+      "modelAnswer": "True. Rav Herzog rejected the Murex trunculus because his experiments were done in England in cloudy, indoor conditions, and he could not get the dye to turn blue. Later work showed sunlight and the proper stage of the process were decisive."
     },
     {
       "id": "Z18-S03-MS-009",
@@ -1136,7 +1153,8 @@
       },
       "text": "Which statements describe the Radzyner Rebbe’s identification of the chilazon and the way it was later refuted?",
       "sessionKey": "Z18S03 Summary",
-      "prompt": "Which statements describe the Radzyner Rebbe’s identification of the chilazon and the way it was later refuted?"
+      "prompt": "Which statements describe the Radzyner Rebbe’s identification of the chilazon and the way it was later refuted?",
+      "modelAnswer": "The Radzyner Rebbe identified the chilazon as the cuttlefish and, using a chemist, produced a blue dye from its blood. Rav Herzog later showed that the same chemical process could produce blue from blood proteins from many animals, so the identification did not prove the claim."
     },
     {
       "id": "Z18-S03-MS-010",
@@ -1231,7 +1249,8 @@
       },
       "text": "What is the chemical difference between indigo and the dye produced from the murex?",
       "sessionKey": "Z18S04 Summary",
-      "prompt": "What is the chemical difference between indigo and the dye produced from the murex?"
+      "prompt": "What is the chemical difference between indigo and the dye produced from the murex?",
+      "modelAnswer": "The difference is structural. Indigo is C16H10N2O2, while murex dye is C16H8Br2N2O2: two hydrogen atoms in the indigo molecule are replaced by two bromine atoms, which changes the light absorption and shifts the color toward purple."
     },
     {
       "id": "Z18-S04-MC-002",
@@ -1268,7 +1287,8 @@
       },
       "text": "What happens when the reduced murex dye solution is exposed to sunlight?",
       "sessionKey": "Z18S04 Summary",
-      "prompt": "What happens when the reduced murex dye solution is exposed to sunlight?"
+      "prompt": "What happens when the reduced murex dye solution is exposed to sunlight?",
+      "modelAnswer": "When the reduced murex solution is exposed to sunlight, a photochemical reaction removes the bromine and leaves a molecule chemically identical to indigo. That makes the color shift from purple toward blue under the correct conditions."
     },
     {
       "id": "Z18-S04-MC-003",
@@ -1343,7 +1363,8 @@
       },
       "text": "How do the Gemaras about where the chilazon was caught support identifying it with the murex trunculus?",
       "sessionKey": "Z18S04 Summary",
-      "prompt": "How do the Gemaras about where the chilazon was caught support identifying it with the murex trunculus?"
+      "prompt": "How do the Gemaras about where the chilazon was caught support identifying it with the murex trunculus?",
+      "modelAnswer": "The Gemara’s geographical clues point to a species that lives along the rocky northern coast of the Mediterranean, which matches the Murex trunculus. The discovery of shell beds there makes the match plausible and gives the identification a real geographic anchor."
     },
     {
       "id": "Z18-S04-MC-005",
@@ -1380,7 +1401,8 @@
       },
       "text": "How is the objection answered that murex shells are far too plentiful to match a rare and costly techeiles?",
       "sessionKey": "Z18S04 Summary",
-      "prompt": "How is the objection answered that murex shells are far too plentiful to match a rare and costly techeiles?"
+      "prompt": "How is the objection answered that murex shells are far too plentiful to match a rare and costly techeiles?",
+      "modelAnswer": "The answer is that the dye was not used only for tzitzis. The Gemara suggests it was also used for ordinary clothing, so a large shell bed does not contradict a precious or costly dye source."
     },
     {
       "id": "Z18-S04-MC-006",
@@ -1417,7 +1439,8 @@
       },
       "text": "How is the Rambam’s statement that the chilazon is found in the yam hamelach explained?",
       "sessionKey": "Z18S04 Summary",
-      "prompt": "How is the Rambam’s statement that the chilazon is found in the yam hamelach explained?"
+      "prompt": "How is the Rambam’s statement that the chilazon is found in the yam hamelach explained?",
+      "modelAnswer": "The Rambam’s phrase “yam hamelach” is explained by the older geography of the period: what we call the Mediterranean was often called yam hamelach, while the Dead Sea was given a different name. The wording therefore does not force an identification with the Dead Sea."
     },
     {
       "id": "Z18-S04-TF-007",
@@ -1996,7 +2019,7 @@
         "page": "Z18S05 Summary",
         "snippet": "What emerges is that both according to Rav Chaim Kaniefsky and Rav Asher Weiss, in order to restore the mesorah there needs to be a direct uninterrupted line of mesorah identifying what the chilazon is."
       },
-      "text": "Which statements describe the objection from mesorah raised against the murex?",
+      "text": "Which statements describe the objection from mesorah raised against the murex, and how does each one frame the issue?",
       "sessionKey": "Z18S05 Summary",
       "prompt": "Which statements describe the objection from mesorah raised against the murex?",
       "modelAnswer": "Both frame the question as one of transmission rather than proof. Rav Chaim Kaniefsky relies on the Midrash that the dye was hidden away, and Rav Asher Weiss insists that only a direct, unbroken line could restore the identification."
@@ -2075,7 +2098,7 @@
         "page": "Z18S05 Summary",
         "snippet": "While one should not selectively abandon a Rav's stricter rulings in favor of more lenient opinions, if one follows a Rav who is lenient and, out of a love for the mitzvah of tzitzis, chooses to wear techeiles, this is considered praiseworthy."
       },
-      "text": "Which statements reflect the practical conclusion offered on wearing techeiles today?",
+      "text": "Which statements reflect the practical conclusion offered on wearing techeiles today, and what is the basic halachic posture behind them?",
       "sessionKey": "Z18S05 Summary",
       "prompt": "Which statements reflect the practical conclusion offered on wearing techeiles today?",
       "modelAnswer": "The authorities divide. Some rule that there is no obligation and no added benefit, while others wore it themselves. Because doing so is a stringency rather than a leniency, wearing it out of love for the mitzvah is considered praiseworthy, and the practical advice is to ask one’s own Rav."
@@ -2779,7 +2802,7 @@
         "page": "Z18S07 Summary",
         "snippet": "The באר הלכה ד״ה סודר quotes a few of the בית יוסף's reasons: 1) Scarves are designed primarily as head coverings, providing warmth in the winter and protection from the sun in the summer, and are therefore not considered ״כסותך״ (garment) for the purpose of tzitzis. This remains true even if most of the time the scarf hangs down over the shoulders. 2) Scarves have other functions such as tying them around the waist when lifting heavy items, to dry your hands, to hold money inside its folds, to carry fruit in it, to wipe away sweat and more."
       },
-      "text": "Which statements give the reasons for exempting scarves?",
+      "text": "Which statements give the reasons for exempting scarves from tzitzis, and how do they differ from standard garment cases?",
       "sessionKey": "Z18S07 Summary",
       "prompt": "Which statements give the reasons for exempting scarves?",
       "modelAnswer": "The exemption rests on how a scarf functions. It is made chiefly to cover the head, which stays true even when it hangs over the shoulders, and it is put to a range of uses that have nothing to do with clothing the body. Since the passuk requires a garment used for covering oneself, a scarf falls outside it."
@@ -2819,7 +2842,7 @@
         "page": "Z18S07 Summary",
         "snippet": "However, Rav Chaim Kaniefsky quoted in קובץ מה טובו אהליך יעקב (ח״ט עמ׳ צט) (18) passkins that even children should be careful not to wear a four-cornered costume on Purim. In the footnote, Rav Sternbuch takes the middle ground and passkins that if the costume is worn over your clothing, and only used as a costume (e.g. a Mexican poncho), it is exempt from tzitzis (since it is being worn for honor and not for protection), but if the costume is also worn as part of your clothing, it is surely obligated in tzitzis."
       },
-      "text": "Which statements describe how a four-cornered Purim costume is treated?",
+      "text": "Which statements describe how a four-cornered Purim costume is treated, and why does that case differ from a teacher’s garment?",
       "sessionKey": "Z18S07 Summary",
       "prompt": "Which statements describe how a four-cornered Purim costume is treated?",
       "modelAnswer": "A child wearing a costume his parents own is regarded as borrowing it, which exempts it, and a garment worn for honor rather than for warmth or protection is exempt in any event. Rav Sternbuch takes a middle position, exempting a costume worn over one’s clothes but obligating one worn as part of them, while Rav Chaim Kaniefsky was stricter still."
@@ -3196,7 +3219,7 @@
         "page": "Z18S08 Summary",
         "snippet": "The משנ״ב סק״ד passkins that it is not enough to just think that you are doing it ״לשמה״, and if one only thinks of it without verbally expressing it, it is unclear if the strings are valid. He adds in סק״ו that if a person began spinning the wool without verbally stating or having in mind that he was doing so for the sake of the mitzvah of tzitzis, and only halfway through the spinning he remembered and declared that he is spinning for the sake of tzitzis, everything spun until that point is invalid."
       },
-      "text": "Which statements describe the requirement of intent in preparing tzitzis strings?",
+      "text": "Which statements describe the requirement of intent in preparing tzitzis strings, and why is that level of intent critical before tying?",
       "sessionKey": "Z18S08 Summary",
       "prompt": "Which statements describe the requirement of intent in preparing tzitzis strings?",
       "modelAnswer": "The spinning must be done for the sake of the mitzvah and expressed in a verbal declaration, and the plying carries the same requirement. Combing is where the custom is lenient, and whatever was spun before the declaration was made is invalid."
@@ -4027,7 +4050,7 @@
         "page": "Z18S10 Summary",
         "snippet": "Regarding bentching and davening which are compared to a mizbayach it is understood that one should not introduce metal, but what does tzitzis have to do with the mizbayach? Rav Chaim Kaniefsky explains that the verse teaches that one should not place metal on any mitzvah (since all mitzvos elongate one's life). In the footnote, he quotes from his father, the Steipler, who for this reason, was careful not to place a metal pen on his sefarim. Rav Chaim adds in דעת נוטה (שעט) that using a plastic knife to cut the tzitzis is allowed (though, you lose the advantage of using your teeth)."
       },
-      "text": "Which statements reflect the guidance given on cutting tzitzis strings?",
+      "text": "Which statements reflect the guidance given on cutting tzitzis strings, and how do those rules relate to proper preparation before tying?",
       "sessionKey": "Z18S10 Summary",
       "prompt": "Which statements reflect the guidance given on cutting tzitzis strings?",
       "modelAnswer": "The strings are cut with the teeth and not with a knife, on the model of the verse forbidding iron on the stones of the mizbayach, since what shortens life should not touch what lengthens it. Rav Chaim Kaniefsky extends the concern to trimming a string once the knots are finished, and permits a plastic knife while noting that the advantage of the teeth is forfeited."
@@ -4838,7 +4861,7 @@
         "page": "Z18S12 Summary",
         "snippet": "The משנ״ב סק״ח passkins that even before placing the strings through the holes, one needs to verbally say that he is placing the strings in the garment for the sake of the mitzvah of tzitzis."
       },
-      "text": "Which statements describe the requirement that the tying be done lishmah?",
+      "text": "Which statements describe the requirement that the tying be done lishmah, and why does that standard matter for the mitzvah?",
       "sessionKey": "Z18S12 Summary",
       "prompt": "Which statements describe the requirement that the tying be done lishmah?",
       "modelAnswer": "The Rambam holds that no intent is needed at all, since the Gemara disqualifies only a non-Jew, while Rashi and the Rosh require it. The Mishnah Berurah asks for a spoken declaration even before the strings are threaded. The Beur Halacha notes a difficulty from the case of the folded string but concludes from the Beis Yosef that the threading should be lishmah, and that a first knot made lishmah may suffice."
@@ -6738,7 +6761,7 @@
         "page": "Z18S16 Summary",
         "snippet": "The Rama argues on the S\"A and passkins that one should not throw his tzitzis into the garbage which is a disrespectful place, though, they do not require genizah (special burial as we do with תשמישי קדושה). The Rama adds that there are those who are careful to place their torn tzitzis in genizah and those who do so, should be blessed. The משנ״ב סק״ז explains that the Rama forbids to actively throw out the tzitzis into the garbage, but if, by the fact that you didn't bury them, they were taken and thrown into the garbage, that would be permitted."
       },
-      "text": "Which statements describe the Rama's position on discarding detached tzitzis strings?",
+      "text": "Which statements describe the Rama’s position on discarding detached tzitzis strings, and what practical concern is behind that ruling?",
       "sessionKey": "Z18S16 Summary",
       "prompt": "Which statements describe the Rama's position on discarding detached tzitzis strings?",
       "modelAnswer": "The Shulchan Aruch permits throwing detached strings away, since tzitzis are tashmishei mitzvah and carry no inherent kedusha, as with a sukkah, lulav or shofar. The Rama disagrees to the extent of forbidding an actively degrading disposal, so they should not be thrown into the rubbish, though he does not require genizah, and he adds that those who are careful to place them in genizah are worthy of blessing."
